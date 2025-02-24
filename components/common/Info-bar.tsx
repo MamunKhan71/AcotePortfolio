@@ -1,6 +1,6 @@
 import { BsFillTelephoneFill } from 'react-icons/bs'
-import { FaLocationDot } from 'react-icons/fa6'
-import { MdMail } from 'react-icons/md'
+import { FaLocationDot ,} from 'react-icons/fa6'
+import { MdEmail, MdPhone  } from 'react-icons/md'
 
 const InfoBar = () => {
     return (
@@ -17,7 +17,7 @@ const InfoBar = () => {
                             <p>(629) 555-0129</p>
                         </div>
                         <div className='flex items-center gap-5'>
-                            <MdMail size={16} />
+                            <MdEmail  size={16} />
                             <p>info@acotegroup.com</p>
                         </div>
                     </div>

@@ -16,6 +16,8 @@ export default {
 			},
 			fontFamily: {
 				'roboto': ['var(--font-roboto)'],
+				'grotesk': ['var(--font-grotesk)'],
+				'inter': ['var(--font-inter)'],
 			},
 			colors: {
 				background: 'hsl(var(--background))',
@@ -29,8 +31,8 @@ export default {
 					foreground: 'hsl(var(--popover-foreground))'
 				},
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: 'hsla(var(--primary))',
+					foreground: 'hsla(var(--primary-foreground))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
