@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${inter.variable} ${geistMono.variable} antialiased ${roboto.variable} ${grotesk.variable}`}
+        className={`${geistSans.variable} ${inter.variable} ${geistMono.variable} antialiased ${roboto.variable} ${grotesk.variable} font-roboto`}
       >
         <InfoBar />
         <Navbar />

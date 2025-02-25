@@ -6,7 +6,7 @@ import React from 'react'
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 
 type PropType = {
-  slides: number[]
+  slides: string[]
   options?: EmblaOptionsType
 }
 
