@@ -1,5 +1,7 @@
 "use client"
 
+import HeaderBadge from "@/components/common/HeaderBadge"
+import HeaderTitle from "@/components/common/HeaderTitle"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useState } from "react"
@@ -130,8 +132,10 @@ export default function ServicesSection() {
         <section className="container mx-auto px-4 py-16">
             <div className="space-y-6">
                 <div>
-                    <h3 className="text-emerald-500 font-medium">OUR SERVICES</h3>
-                    <h2 className="text-4xl font-bold mt-2">Global software, AI innovation & IT Consulting</h2>
+                    <div className="space-y-2">
+                        <HeaderBadge title="our services" />
+                        <HeaderTitle title="Global software, AI innovation & IT Consulting" />
+                    </div>
                     <p className="text-muted-foreground mt-4 max-w-xl">
                         Our dedicated and highly professional team strives to provide our global clients with full-stack solutions
                         by multiple platforms, languages in a timely manner.
@@ -191,10 +195,16 @@ export default function ServicesSection() {
                 {/* Navigation */}
                 <div className="flex gap-2 mt-8">
                     <Button variant="outline" size="icon" onClick={prevService} className="rounded-full text-gray-400">
-                        <ChevronLeft className="h-4 w-4" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 12H5" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M12 19L5 12L12 5" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
                     </Button>
                     <Button variant="outline" size="icon" onClick={nextService} className="rounded-full text-gray-400">
-                        <ChevronRight className="h-4 w-4" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M12 5L19 12L12 19" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
                     </Button>
                 </div>
             </div>

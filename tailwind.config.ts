@@ -65,7 +65,16 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
-			}
+			},
+			animation: {
+				heartbeat: "heartbeat 1s ease-in-out infinite",
+			},
+			keyframes: {
+				heartbeat: {
+					"0%, 100%": { transform: "scale(1)" },
+					"50%": { transform: "scale(1.2)" },
+				},
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
