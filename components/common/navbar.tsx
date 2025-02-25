@@ -1,14 +1,14 @@
 'use client'
+import { services } from "@/data/navbar-menu";
+import { AnimatePresence, motion } from 'framer-motion';
+import Image from "next/image";
+import Link from "next/link";
 import { ReactNode, useState } from "react";
 import { Button } from "../ui/button";
-import Link from "next/link";
-import Image from "next/image";
-import { services } from "@/data/navbar-menu";
 import { Card, CardHeader } from "../ui/card";
-import { AnimatePresence, motion } from 'framer-motion'
-import { div } from "framer-motion/client";
+import { ChevronDown, ChevronUp } from "lucide-react";
 const NavigationMenu = () => {
-
+    const [open, setOpen] = useState(false)
     return (
         <div className="w-full shadow-sm py-2">
             <div className="relative flex items-center justify-between container mx-auto w-full font-roboto">
@@ -20,8 +20,10 @@ const NavigationMenu = () => {
                         <ul className="flex gap-12 items-center">
                             <li>Home</li>
                             <li>
-                                <MyComponentFlyout href="#" FlyoutContent >
-                                    <p>Service</p>
+                                <MyComponentFlyout href="#" FlyoutContent open={open} setOpen={setOpen}>
+                                    <p className="inline-flex gap-2 items-center transition-all duration-500 ease-in-out delay-300">
+                                        Service {!open ? <ChevronDown size={20} className="transition-transform duration-300" /> : <ChevronDown size={20} className="transition-transform duration-300 rotate-180" />}
+                                    </p>
                                 </MyComponentFlyout>
                             </li>
                             <li>Portfolio</li>
@@ -39,8 +41,7 @@ const NavigationMenu = () => {
 export default NavigationMenu;
 
 
-const MyComponentFlyout = ({ children, href = "", FlyoutContent }: { children: ReactNode, href: string, FlyoutContent: boolean }) => {
-    const [open, setOpen] = useState(false)
+const MyComponentFlyout = ({ open, setOpen, children, href = "", FlyoutContent }: { open: boolean, children: ReactNode, href: string, FlyoutContent: boolean, setOpen: (open: boolean) => void }) => {
     const showFlyout = open && FlyoutContent
     return (
         <div
@@ -58,7 +59,7 @@ const MyComponentFlyout = ({ children, href = "", FlyoutContent }: { children: R
                         exit={{ opacity: 0, y: 15 }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}
                         style={{ x: '-50%' }}
-                        className="absolute top-16 left-1/2 w-full">
+                        className="absolute z-50 top-16 left-1/2 w-full">
                         <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent">
                         </div>
                         <ServiceDropdownMenu />
