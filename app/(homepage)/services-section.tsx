@@ -31,7 +31,89 @@ const services: Service[] = [
         description: "We develop tailored software solutions that perfectly align with your business needs and objectives.",
         image: "/placeholder.svg?height=400&width=600",
     },
-]
+    {
+        id: 3,
+        name: "Mobile App",
+        tag: "MOBILE APP",
+        title: "Build mobile applications that engage users",
+        description:
+            "Our team specializes in creating intuitive, fast, and responsive mobile applications for both iOS and Android platforms.",
+        image: "/mobile-app.png",
+    },
+    {
+        id: 4,
+        name: "Web App",
+        tag: "WEB APP",
+        title: "Powerful web applications to scale your business",
+        description:
+            "We design and develop dynamic and scalable web applications that improve efficiency and enhance user experience.",
+        image: "/web-app.png",
+    },
+    {
+        id: 5,
+        name: "Design",
+        tag: "DESIGN",
+        title: "Innovative and user-friendly designs",
+        description:
+            "From UX/UI design to creative digital branding, we craft visually appealing and functional designs that captivate users.",
+        image: "/design.png",
+    },
+    {
+        id: 6,
+        name: "Cloud Migration",
+        tag: "CLOUD MIGRATION",
+        title: "Seamless transition to cloud environments",
+        description:
+            "We help businesses move their infrastructure and operations to the cloud, ensuring minimal disruption and maximum performance.",
+        image: "/cloud-migration.png",
+    },
+    {
+        id: 7,
+        name: "CRM services",
+        tag: "CRM SERVICES",
+        title: "Enhancing customer relationships through CRM",
+        description:
+            "We implement and manage CRM solutions to help you build stronger, lasting relationships with your customers.",
+        image: "/crm-services.png",
+    },
+    {
+        id: 8,
+        name: "QA & Testing",
+        tag: "QA & TESTING",
+        title: "Ensure the quality of your product",
+        description:
+            "Our testing services help deliver bug-free, high-quality software by performing extensive manual and automated tests.",
+        image: "/qa-testing.png",
+    },
+    {
+        id: 9,
+        name: "Game Development",
+        tag: "GAME DEVELOPMENT",
+        title: "Create immersive gaming experiences",
+        description:
+            "We provide full-cycle game development services, creating engaging, high-performance games for various platforms.",
+        image: "/game-development.png",
+    },
+    {
+        id: 10,
+        name: "IoT Development Services",
+        tag: "IOT DEVELOPMENT",
+        title: "Unlock the potential of IoT for your business",
+        description:
+            "We develop IoT solutions to enable smarter devices, connectivity, and data analytics for improved decision-making.",
+        image: "/iot-development.png",
+    },
+    {
+        id: 11,
+        name: "Smart Factory Services",
+        tag: "SMART FACTORY",
+        title: "Digitally transform your manufacturing process",
+        description:
+            "We provide end-to-end smart factory solutions, integrating IoT, AI, and automation to optimize production and efficiency.",
+        image: "/smart-factory.png",
+    }
+];
+
 
 export default function ServicesSection() {
     const [activeService, setActiveService] = useState(0)
@@ -58,12 +140,12 @@ export default function ServicesSection() {
 
                 <div className="relative grid lg:grid-cols-[300px,1fr] gap-24 mt-12">
                     {/* Services List */}
-                    <div className="space-y-1">
+                    <div>
                         {services.map((service, index) => (
                             <button
                                 key={service.id}
                                 onClick={() => setActiveService(index)}
-                                className={`relative w-full text-left p-4 hover:bg-muted rounded-lg transition-colors ${index === activeService ? "bg-muted" : ""
+                                className={`relative w-full text-left px-4 py-[11px] hover:bg-muted rounded-lg transition-colors ${index === activeService ? "bg-muted" : ""
                                     }`}
                             >
                                 <div className="flex items-center gap-4">
@@ -83,18 +165,20 @@ export default function ServicesSection() {
                     {/* Active Service Content */}
                     <div className="relative overflow-hidden shadow-[0_0px_10px_rgba(0,0,0,0.05)] rounded-2xl p-[44px]">
                         <div className="flex gap-14 justify-between h-full w-full items-start">
-                            <div className="flex-1 space-y-6 max-w-xs flex flex-col justify-between h-full">
+                            <div className="flex-1 space-y-6 flex flex-col justify-between h-full w-auto">
                                 <span className="inline-flex px-4 py-1.5 bg-primary/10 backdrop-blur-sm border border-primary/80 w-fit rounded-lg text-base font-semibold text-primary">
                                     {services[activeService].tag}
                                 </span>
                                 <div className="space-y-5">
-                                    <h3 className="text-3xl font-bold">{services[activeService].title}</h3>
-                                    <p className="text-muted-foreground text-lg">{services[activeService].description}</p>
+                                    <h3 className="text-3xl font-bold max-w-sm">{services[activeService].title}</h3>
+                                    <p className="text-muted-foreground text-lg max-w-xs">{services[activeService].description}</p>
                                 </div>
-                                <Button variant={'default'} className="bg-primary">Learn More</Button>
+                                <div>
+                                    <Button variant={'default'} className="bg-primary">Learn More</Button>
+                                </div>
                             </div>
 
-                            <div className="flex-1 h-[357px] relative">
+                            <div className="flex-1 h-full relative">
                                 <div className="h-full absolute -right-12">
                                     <img src="/ai.png" alt="" className="h-full" />
                                 </div>
@@ -106,10 +190,10 @@ export default function ServicesSection() {
 
                 {/* Navigation */}
                 <div className="flex gap-2 mt-8">
-                    <Button variant="outline" size="icon" onClick={prevService} className="rounded-full">
+                    <Button variant="outline" size="icon" onClick={prevService} className="rounded-full text-gray-400">
                         <ChevronLeft className="h-4 w-4" />
                     </Button>
-                    <Button variant="outline" size="icon" onClick={nextService} className="rounded-full">
+                    <Button variant="outline" size="icon" onClick={nextService} className="rounded-full text-gray-400">
                         <ChevronRight className="h-4 w-4" />
                     </Button>
                 </div>
