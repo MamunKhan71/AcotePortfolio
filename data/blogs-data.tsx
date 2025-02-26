@@ -19,9 +19,4 @@ export const blogsData: blogsDataTypes[] = [
         category: "UI/UX Design",
         title: "AOP Development"
     },
-    {
-        imageUrl: "/blog4.png",
-        category: "Development",
-        title: "Ticket Finding Mobile Application Development - Quick Trip"
-    }
 ]

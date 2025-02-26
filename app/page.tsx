@@ -2,6 +2,7 @@ import HeroSection from "@/components/hero-section";
 import ServicesSection from "./(homepage)/services-section";
 import OurJourney from "./(homepage)/our-journey";
 import OurProjects from "./(homepage)/our-projects";
+import OurPartners from "./(homepage)/our-partners";
 
 export default function Home() {
 
@@ -12,6 +13,9 @@ export default function Home() {
         <ServicesSection />
         <OurJourney />
         <OurProjects />
+      </div>
+      <div className="space-y-28 mt-28">
+        <OurPartners />
       </div>
     </>
   );
