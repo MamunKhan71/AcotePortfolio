@@ -7,6 +7,7 @@ export interface countryListTypes {
     type: string;
     operation_status: boolean;
     image: string;
+    flag: string;
 }
 
 export const countryList: countryListTypes[] = [
@@ -18,37 +19,41 @@ export const countryList: countryListTypes[] = [
         name: "Hasan Mahmudul",
         role: "Vice President",
         operation_status: false,
-        image: "Operational"
+        image: "Operational",
+        flag: '/usa-flag.png'
     },
     {
         id: 1,
         country: "Bangladesh",
-        type: "Head Office",
-        year: 2025,  
+        type: "HQ",
+        year: 2025,
         name: "Hasan Mahmudul",
         role: "Vice President",
         operation_status: true,
-        image: "Operational"
+        image: "Operational",
+        flag: '/bd-flag.png'
     },
     {
         id: 2,
         country: "South Korea",
         type: "",
-        year: 2025,  
+        year: 2025,
         name: "Hasan Mahmudul",
         role: "Vice President",
         operation_status: true,
-        image: "In Development"
+        image: "In Development",
+        flag: '/korea-flag.png'
     },
     {
         id: 3,
         country: "Singapore",
-        type: "(2024) ",
+        type: "",
         year: 2024,
         name: "Hasan Mahmudul",
         role: "Vice President",
         operation_status: true,
-        image: "In Development"
+        image: "In Development",
+        flag: '/sg-flag.png'
     },
     {
         id: 4,
@@ -58,6 +63,7 @@ export const countryList: countryListTypes[] = [
         name: "Hasan Mahmudul",
         role: "Vice President",
         operation_status: false,
-        image: "In Development"
+        image: "In Development",
+        flag: '/usa-flag.png'
     }
 ];

@@ -1,6 +1,7 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { countryListTypes } from "@/data/country-list"
 
-export default function CardBackground() {
+export default function CardBackground({ country }: { country: countryListTypes }) {
   return (
     <div
       className="relative overflow-hidden w-[223px] h-[320px] rounded-2xl bg-[#1B1C1C] bg-contain bg-no-repeat"
@@ -21,12 +22,14 @@ export default function CardBackground() {
         }}
       ></div>
       <div className="w-full text-center absolute top-4 left-1/2 -translate-x-1/2">
-        <h2 className="text-white text-xl font-bold">Coming Soon</h2>
+        {
+          !country?.operation_status && <h2 className="text-white text-xl font-bold">Coming Soon</h2>
+        }
       </div>
-      <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2">
-        <div className="flex items-center gap-2">
-          <img src="/usa-flag.png" className="h-4 w-4" />
-          <h2 className="text-white text-sm font-semibold ">USA (2025)</h2>
+      <div className="absolute w-full bottom-2.5 left-1/2 -translate-x-1/2">
+        <div className="flex items-center justify-center gap-2 ">
+          <img src={country.flag} className="h-4 w-4" />
+          <h2 className="text-white text-sm font-semibold">{country.country}{" "}{country.type}</h2>
         </div>
       </div>
     </div>

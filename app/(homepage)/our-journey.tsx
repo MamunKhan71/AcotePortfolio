@@ -3,11 +3,15 @@ import CardBackground from '@/components/common/BackgroundCard'
 import ComponentTitle from '@/components/common/ComponentTitle'
 import HeaderBadge from '@/components/common/HeaderBadge'
 import { Button } from '@/components/ui/button'
-import { countryList } from '@/data/country-list'
-import React, { useState } from 'react'
+import { countryList, countryListTypes } from '@/data/country-list'
+import React, { useEffect, useState } from 'react'
 
 const OurJourney = () => {
     const [activeCountry, setActiveCountry] = useState(0)
+    const [selectedCountry, setSelectedCountry] = useState<countryListTypes | null>(null);
+    useEffect(() => {
+        setSelectedCountry(countryList?.find(country => country.id === activeCountry) || null)
+    }, [activeCountry])
     return (
         <div className='h-[601px] w-full bg-[#111827]'>
             <div className='relative w-full h-full container mx-auto py-[100px]'>
@@ -33,17 +37,64 @@ const OurJourney = () => {
                         <div className='absolute -top-16 left-24'>
                             <div className='flex gap-4 items-center'>
                                 <div className='bg-red-500 h-3 w-3 rounded-full animate-heartbeat border border-[#00000]/10'></div>
-                                <div className='w-[223px] h-[315.422px]'>
+                                <div className="w-[223px] h-[315.422px]">
                                     {
-                                        activeCountry && <CardBackground />
+                                        activeCountry === 0 && <CardBackground country={countryList?.find(country => country.id === activeCountry)} />
                                     }
                                 </div>
                             </div>
                         </div>
-                        <div className='absolute top-[120px] right-[296px] bg-[#117fd9] h-3 w-3 rounded-full animate-heartbeat border border-[#00000]/10'></div>
-                        <div className='absolute top-[150px] right-[190px] bg-[#11d9c8] h-3 w-3 rounded-full animate-heartbeat border border-[#00000]/10'></div>
-                        <div className='absolute bottom-[130px] right-[205px] bg-[#a71752] h-3 w-3 rounded-full animate-heartbeat border border-[#00000]/10'></div>
-                        <div className='absolute bottom-[125px] right-[100px] bg-[#eb7600] h-3 w-3 rounded-full animate-heartbeat border border-[#00000]/10'></div>
+                        {/* SAME FOR THE REST */}
+                        <div className='absolute top-[120px] right-[296px]'>
+                            <div className='flex gap-4 items-center'>
+                                <div className='bg-red-500 h-3 w-3 rounded-full animate-heartbeat border border-[#00000]/10'></div>
+                                <div className="w-[223px] h-[315.422px]">
+                                    {
+                                        activeCountry === 1 && <CardBackground country={countryList?.find(country => country.id === activeCountry)} />
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div className='absolute top-[120px] right-[296px]'>
+                            <div className='flex gap-4 items-center'>
+                                <div className="w-[223px] h-[315.422px]">
+                                    <div className=' bg-[#117fd9] h-3 w-3 rounded-full animate-heartbeat border border-[#00000]/10'></div>
+                                    {
+                                        activeCountry === 2 && <CardBackground country={countryList?.find(country => country.id === activeCountry)} />
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div className='absolute top-[150px] right-[190px]'>
+                            <div className='flex gap-4 items-center'>
+                                <div className='bg-[#11d9c8] h-3 w-3 rounded-full animate-heartbeat border border-[#00000]/10'></div>
+                                <div className="w-[223px] h-[315.422px]">
+                                    {
+                                        activeCountry === 3 && <CardBackground country={countryList?.find(country => country.id === activeCountry)} />
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div className='absolute bottom-[130px] right-[205px]'>
+                            <div className='flex gap-4 items-center'>
+                                <div className=' bg-[#a71752] h-3 w-3 rounded-full animate-heartbeat border border-[#00000]/10'></div>
+                                <div className="w-[223px] h-[315.422px]">
+                                    {
+                                        activeCountry === 4 && <CardBackground country={countryList?.find(country => country.id === activeCountry)} />
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div className='absolute bottom-[125px] right-[100px] '>
+                            <div className='flex gap-4 items-center'>
+                                <div className='bg-[#eb7600] h-3 w-3 rounded-full animate-heartbeat border border-[#00000]/10'></div>
+                                <div className="w-[223px] h-[315.422px]">
+                                    {
+                                        activeCountry === 5 && <CardBackground country={countryList?.find(country => country.id === activeCountry)} />
+                                    }
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
