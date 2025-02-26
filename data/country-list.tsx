@@ -1,5 +1,6 @@
 export interface countryListTypes {
     id: number;
+    countryTitle: string,
     country: string;
     year: number;
     name: string;
@@ -13,57 +14,62 @@ export interface countryListTypes {
 export const countryList: countryListTypes[] = [
     {
         id: 0,
+        countryTitle: "USA (2025)",
         country: "USA",
         type: "(2025)",
         year: 2025,
         name: "Hasan Mahmudul",
         role: "Vice President",
         operation_status: false,
-        image: "Operational",
+        image: "/usa-profile.png",
         flag: '/usa-flag.png'
     },
     {
         id: 1,
+        countryTitle: "Bangladesh - Head Office",
         country: "Bangladesh",
         type: "HQ",
         year: 2025,
         name: "Hasan Mahmudul",
         role: "Vice President",
         operation_status: true,
-        image: "Operational",
+        image: "/hasan-profile.png",
         flag: '/bd-flag.png'
     },
     {
         id: 2,
+        countryTitle: "South Korea",
         country: "South Korea",
         type: "",
         year: 2025,
         name: "Hasan Mahmudul",
         role: "Vice President",
         operation_status: true,
-        image: "In Development",
+        image: "/kim-profile.png",
         flag: '/korea-flag.png'
     },
     {
         id: 3,
+        countryTitle: "Singapore (2024)",
         country: "Singapore",
         type: "",
         year: 2024,
         name: "Hasan Mahmudul",
         role: "Vice President",
         operation_status: true,
-        image: "In Development",
+        image: "/nig-profile.png",
         flag: '/sg-flag.png'
     },
     {
         id: 4,
+        countryTitle: "Japan (2024)",
         country: "Japan",
         type: "(2025)",
         year: 2025,
         name: "Hasan Mahmudul",
         role: "Vice President",
         operation_status: false,
-        image: "In Development",
+        image: "/japan-profile.png",
         flag: '/usa-flag.png'
     }
 ];
