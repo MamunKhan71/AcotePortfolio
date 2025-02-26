@@ -13,7 +13,7 @@ export const countryList: countryListTypes[] = [
     {
         id: 0,
         country: "USA",
-        type: "",
+        type: "(2025)",
         year: 2025,
         name: "Hasan Mahmudul",
         role: "Vice President",
@@ -43,7 +43,7 @@ export const countryList: countryListTypes[] = [
     {
         id: 3,
         country: "Singapore",
-        type: "",
+        type: "(2024) ",
         year: 2024,
         name: "Hasan Mahmudul",
         role: "Vice President",
@@ -53,7 +53,7 @@ export const countryList: countryListTypes[] = [
     {
         id: 4,
         country: "Japan",
-        type: "",
+        type: "(2025)",
         year: 2025,
         name: "Hasan Mahmudul",
         role: "Vice President",

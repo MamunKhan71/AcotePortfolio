@@ -2,21 +2,33 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 
 export default function CardBackground() {
   return (
-    <Card className="w-full h-full border-none rounded-xl">
-      <div className="relative">
-        <img
-          src="/usa.png"
-          width={223}
-          height={325}
-          alt="Card image"
-          className="object-cover w-full rounded-t-xl"
-        />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b overflow-hidden from-transparent to-black opacity-80 rounded-t-xl rotate-180"></div>
+    <div
+      className="relative overflow-hidden w-[223px] h-[320px] rounded-2xl bg-[#1B1C1C] bg-contain bg-no-repeat"
+      style={{
+        backgroundImage: `url('/usa.png')`,
+      }}
+    >
+      <div
+        className="absolute bottom-10 left-0 w-full h-1/2"
+        style={{
+          background: `linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%)`
+        }}
+      ></div>
+      <div
+        className="absolute top-0 left-0 w-full h-1/2"
+        style={{
+          background: `linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, #000 100%)`
+        }}
+      ></div>
+      <div className="w-full text-center absolute top-4 left-1/2 -translate-x-1/2">
+        <h2 className="text-white text-xl font-bold">Coming Soon</h2>
       </div>
-      <CardHeader className="px-0 text-white text-center bg-[#1B1C1C] py-3">
-        <CardTitle className="text-lg">USA</CardTitle>
-      </CardHeader>
-    </Card>
+      <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2">
+        <div className="flex items-center gap-2">
+          <img src="/usa-flag.png" className="h-4 w-4" />
+          <h2 className="text-white text-sm font-semibold ">USA (2025)</h2>
+        </div>
+      </div>
+    </div>
   )
 }
