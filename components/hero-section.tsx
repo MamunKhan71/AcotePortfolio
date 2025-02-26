@@ -16,7 +16,7 @@ const HeroSection = () => {
         <div>
             <div className="relative">
                 <EmblaCarousel slides={slides} options={OPTIONS} />
-                <div className="container mx-auto">
+                <div className="container mx-auto w-full h-full">
                     <div className="absolute top-1/2 -translate-y-1/2">
                         <div className="space-y-12">
                             <div className="max-w-xl space-y-5">

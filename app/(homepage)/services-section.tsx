@@ -129,7 +129,7 @@ export default function ServicesSection() {
     }
 
     return (
-        <section className="container mx-auto px-4 py-16">
+        <section className="container mx-auto mt-28">
             <div className="space-y-6">
                 <div>
                     <div className="space-y-2">

@@ -3,15 +3,12 @@ import CardBackground from '@/components/common/BackgroundCard'
 import ComponentTitle from '@/components/common/ComponentTitle'
 import HeaderBadge from '@/components/common/HeaderBadge'
 import { Button } from '@/components/ui/button'
-import { countryList, countryListTypes } from '@/data/country-list'
-import React, { useEffect, useState } from 'react'
+import { countryList } from '@/data/country-list'
+import { useState } from 'react'
 
 const OurJourney = () => {
     const [activeCountry, setActiveCountry] = useState(0)
-    const [selectedCountry, setSelectedCountry] = useState<countryListTypes | null>(null);
-    useEffect(() => {
-        setSelectedCountry(countryList?.find(country => country.id === activeCountry) || null)
-    }, [activeCountry])
+
     return (
         <div className='h-[601px] w-full bg-[#111827]'>
             <div className='relative w-full h-full container mx-auto py-[100px]'>
@@ -28,7 +25,6 @@ const OurJourney = () => {
                                 </div>
                             ))
                         }
-
                     </div>
                 </div>
                 <div className='h-[339.323px] w-[894.638px] absolute right-0 top-1/2 -translate-y-1/2'>
