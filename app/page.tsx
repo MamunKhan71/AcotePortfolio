@@ -5,6 +5,7 @@ import OurProjects from "./(homepage)/our-projects";
 import OurPartners from "./(homepage)/our-partners";
 import ClientTestimonial from "./(homepage)/client-testimonial";
 import OurEvents from "./(homepage)/our-events";
+import ContactUsBanner from "@/components/common/contact-us-banner";
 
 export default function Home() {
 
@@ -20,6 +21,7 @@ export default function Home() {
         <OurPartners />
         <ClientTestimonial />
         <OurEvents />
+        <ContactUsBanner />
       </div>
     </>
   );
