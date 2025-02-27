@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter, Roboto, Space_Grotesk } from "next/font/googl
 import "./globals.css";
 import InfoBar from "@/components/common/Info-bar";
 import Navbar from "@/components/common/navbar";
+import Footer from "@/components/common/footer/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,7 @@ export default function RootLayout({
         <InfoBar />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
