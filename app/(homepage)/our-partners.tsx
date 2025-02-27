@@ -2,7 +2,6 @@ import ComponentTitle from '@/components/common/ComponentTitle'
 import HeaderBadge from '@/components/common/HeaderBadge'
 import HeaderDescription from '@/components/common/HeaderDescription'
 import { CompanySlider } from '@/components/common/marquee/company-slider'
-import React from 'react'
 
 const OurPartners = () => {
     return (

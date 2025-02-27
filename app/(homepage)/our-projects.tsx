@@ -3,7 +3,6 @@ import HeaderBadge from '@/components/common/HeaderBadge'
 import ProjectCards from '@/components/common/ProjectCards'
 import { Button } from '@/components/ui/button'
 import { blogsData } from '@/data/blogs-data'
-import React from 'react'
 
 const OurProjects = () => {
     return (

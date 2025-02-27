@@ -1,7 +1,6 @@
 import ComponentTitle from '@/components/common/ComponentTitle'
 import HeaderBadge from '@/components/common/HeaderBadge'
 import TestimonialSlider from '@/components/common/testimonial-slider/TestimonialSlider'
-import React from 'react'
 
 const ClientTestimonial = () => {
     return (
