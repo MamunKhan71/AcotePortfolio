@@ -18,7 +18,7 @@ const OurJourney = () => {
                     <div className='mt-7 w-full space-y-3'>
                         {
                             countryList?.map((country, index) => (
-                                <div className={`${activeCountry === index ? 'w-full' : 'w-[92%]'}`}>
+                                <div key={index} className={`${activeCountry === index ? 'w-full' : 'w-[92%]'}`}>
                                     <Button onClick={() => setActiveCountry(index)} variant={'darkash'} className={`w-full justify-start gap-2`}>
                                         <span className='w-[9.515px] h-[9.515px] bg-[#76BE42] rounded-full'></span>
                                         {country.countryTitle}</Button>

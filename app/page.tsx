@@ -3,6 +3,7 @@ import ServicesSection from "./(homepage)/services-section";
 import OurJourney from "./(homepage)/our-journey";
 import OurProjects from "./(homepage)/our-projects";
 import OurPartners from "./(homepage)/our-partners";
+import ClientTestimonial from "./(homepage)/client-testimonial";
 
 export default function Home() {
 
@@ -16,6 +17,7 @@ export default function Home() {
       </div>
       <div className="space-y-28 mt-28">
         <OurPartners />
+        <ClientTestimonial />
       </div>
     </>
   );

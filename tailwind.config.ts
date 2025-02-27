@@ -33,16 +33,16 @@ export default {
     				foreground: 'hsl(var(--card-foreground))'
     			},
     			popover: {
-    				DEFAULT: 'hsl(var(--popover))',
-    				foreground: 'hsl(var(--popover-foreground))'
+    				DEFAULT: 'hsla(var(--popover))',
+    				foreground: 'hsla(var(--popover-foreground))'
     			},
     			primary: {
     				DEFAULT: 'hsla(var(--primary))',
     				foreground: 'hsla(var(--primary-foreground))'
     			},
     			secondary: {
-    				DEFAULT: 'hsl(var(--secondary))',
-    				foreground: 'hsl(var(--secondary-foreground))'
+    				DEFAULT: 'hsla(var(--secondary))',
+    				foreground: 'hsla(var(--secondary-foreground))'
     			},
     			muted: {
     				DEFAULT: 'hsl(var(--muted))',
