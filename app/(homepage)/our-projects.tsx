@@ -4,15 +4,15 @@ import ProjectCards from '@/components/common/ProjectCards'
 import { Button } from '@/components/ui/button'
 import { blogsData } from '@/data/blogs-data'
 
-const OurProjects = () => {
+const OurProjects = ({ isService }: { isService: boolean }) => {
     return (
         <div className='container mx-auto h-full w-full'>
             <div className='flex w-full justify-between items-center'>
                 <div>
-                    <HeaderBadge title='our projects' />
+                    {!isService && <HeaderBadge title='our projects' />}
                     <ComponentTitle title='recent projects' />
                 </div>
-                <Button className='text-xl' variant={'outline'}>View all</Button>
+                {!isService && <Button className='text-xl' variant={'outline'}>View all</Button>}
             </div>
             <div className='grid grid-cols-3 gap-7 mt-14 w-full h-full pb-28'>
                 {

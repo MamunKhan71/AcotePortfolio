@@ -15,7 +15,7 @@ export default function Home() {
       <div className="space-y-28">
         <ServicesSection />
         <OurJourney />
-        <OurProjects />
+        <OurProjects isService={false} />
       </div>
       <div className="space-y-28 mt-28">
         <OurPartners />
