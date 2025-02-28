@@ -20,7 +20,7 @@ const NavigationMenu = () => {
                         <ul className="flex gap-12 items-center">
                             <li>Home</li>
                             <li>
-                                <MyComponentFlyout href="#" FlyoutContent open={open} setOpen={setOpen}>
+                                <MyComponentFlyout href="/our-services" FlyoutContent open={open} setOpen={setOpen}>
                                     <p className="inline-flex gap-2 items-center transition-all duration-500 ease-in-out delay-300">
                                         Service {!open ? <ChevronDown size={20} className="transition-transform duration-300" /> : <ChevronDown size={20} className="transition-transform duration-300 rotate-180" />}
                                     </p>
@@ -47,9 +47,9 @@ const MyComponentFlyout = ({ open, setOpen, children, href = "", FlyoutContent }
         <div
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}>
-            <a href={href} className="text-black">
+            <Link href={href} className="text-black">
                 {children}
-            </a>
+            </Link>
             <AnimatePresence>
                 {
                     showFlyout &&

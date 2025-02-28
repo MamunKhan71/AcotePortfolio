@@ -44,7 +44,9 @@ export default function RootLayout({
       >
         <InfoBar />
         <Navbar />
-        {children}
+        <div className="min-h-screen w-full">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
