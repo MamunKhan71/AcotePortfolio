@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 
 const OurServicesHeader = () => {
     return (
-        <div className='flex justify-between items-center w-full'>
+        <div className='container mx-auto  flex justify-between items-center w-full'>
             <div className="w-full h-full flex-1">
                 <div>
                     <div className="space-y-12">

@@ -4,7 +4,7 @@ import { ourServicesApproachData, ourServicesApproachDataTypes } from '@/data/ou
 
 const OurServicesApproach = () => {
     return (
-        <div>
+        <div className='container mx-auto w-full'>
             <div className='text-center space-y-1 mt-12'>
                 <ComponentTitle title='Our web development services' />
                 <HeaderDescription className='max-w-[475px] mx-auto' title='Advanced technological stacks available to satisfy any development requirements from your business' />

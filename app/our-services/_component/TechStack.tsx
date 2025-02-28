@@ -32,13 +32,13 @@ export default function TechStack() {
         {
             id: "frontend",
             name: "Front-end",
-            icon: "/placeholder.svg?height=40&width=40",
+            icon: "/technology/frontend-icon.png",
             technologies: [
-                { name: "Angular", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "JavaScript", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "React", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Bootstrap", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Vue.js", logo: "/placeholder.svg?height=40&width=40" },
+                { name: "Angular", logo: "/technology/frontend-1.png" },
+                { name: "JavaScript", logo: "/technology/frontend-2.png" },
+                { name: "React", logo: "/technology/frontend-3.png" },
+                { name: "Bootstrap", logo: "/technology/frontend-4.png" },
+                { name: "Vue.js", logo: "/technology/frontend-5.png" },
             ],
         },
         {
@@ -147,11 +147,11 @@ export default function TechStack() {
                                     <Image
                                         src={tech.logo || "/placeholder.svg"}
                                         alt={tech.name}
-                                        width={50}
-                                        height={50}
+                                        width={100}
+                                        height={100}
                                         className="object-contain"
                                     />
-                                    <span className="text-sm text-gray-600">{tech.name}</span>
+                                    {/* <span className="text-sm t ext-gray-600">{tech.name}</span> */}
                                 </div>
                             ))}
                         </div>

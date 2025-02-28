@@ -10,18 +10,20 @@ import OurProcess from './_component/OurProcess'
 const OurServices = () => {
     return (
         <div>
-            <div className='container mx-auto w-full mt-10'>
+            <div className='w-full mt-10'>
                 <OurServicesHeader />
-                <div className='space-y-24 mb-24'>
+                <div className='space-y-24'>
                     <OurServicesApproach />
+                    <OurProcess />
                     <TechnologiesSection />
-                    <OurIndustriesSection />
-                    <OurProjects isService={true} />
-                    <FAQSection />
+                    <div className='container mx-auto w-full space-y-24 mb-24'>
+                        <OurIndustriesSection />
+                        <OurProjects isService={true} />
+                        <FAQSection />
+                    </div>
+                    <ContactUsBanner />
                 </div>
             </div>
-            <OurProcess />
-            <ContactUsBanner />
         </div>
     )
 }
