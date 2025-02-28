@@ -5,6 +5,7 @@ import OurIndustriesSection from './_component/OurIndustriesSection'
 import OurServicesApproach from './_component/OurServicesApproach'
 import OurServicesHeader from './_component/OurServicesHeader'
 import TechnologiesSection from './_component/TechnologiesSection'
+import OurProcess from './_component/OurProcess'
 
 const OurServices = () => {
     return (
@@ -19,6 +20,7 @@ const OurServices = () => {
                     <FAQSection />
                 </div>
             </div>
+            <OurProcess />
             <ContactUsBanner />
         </div>
     )
