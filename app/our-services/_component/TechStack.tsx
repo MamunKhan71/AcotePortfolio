@@ -44,69 +44,69 @@ export default function TechStack() {
         {
             id: "backend",
             name: "Back-end",
-            icon: "/placeholder.svg?height=40&width=40",
+            icon: "/technology/backend-icon.png",
             technologies: [
-                { name: "Node.js", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Python", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Express", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Java", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Spring", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Go", logo: "/placeholder.svg?height=40&width=40" },
+                { name: "Node.js", logo: "/technology/backend-1.png" },
+                { name: "Python", logo: "/technology/backend-2.png" },
+                { name: "Express", logo: "/technology/backend-3.png" },
+                { name: "Java", logo: "/technology/backend-4.png" },
+                { name: "Spring", logo: "/technology/backend-5.png" },
+                { name: "Go", logo: "/technology/backend-6.png" },
             ],
         },
         {
             id: "project-management",
             name: "Project Management",
-            icon: "/placeholder.svg?height=40&width=40",
+            icon: "/technology/project-icon.png",
             technologies: [
-                { name: "Jira", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Confluence", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Asana", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Trello", logo: "/placeholder.svg?height=40&width=40" },
+                { name: "Jira", logo: "/technology/project-1.png" },
+                { name: "Confluence", logo: "/technology/project-2.png" },
+                { name: "Asana", logo: "/technology/project-3.png" },
+                { name: "Trello", logo: "/technology/project-4.png" },
             ],
         },
         {
             id: "big-data",
             name: "Big Data",
-            icon: "/placeholder.svg?height=40&width=40",
+            icon: "/technology/bigdata-icon.png",
             technologies: [
-                { name: "Kafka", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Amazon Elasticache", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "MongoDB", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Amazon DocumentDB", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "DynamoDB", logo: "/placeholder.svg?height=40&width=40" },
+                { name: "Kafka", logo: "/technology/bigdata-1.png" },
+                { name: "Amazon Elasticache", logo: "/technology/bigdata-2.png" },
+                { name: "MongoDB", logo: "/technology/bigdata-3.png" },
+                { name: "Amazon DocumentDB", logo: "/technology/bigdata-4.png" },
+                { name: "DynamoDB", logo: "/technology/bigdata-5.png" },
             ],
         },
         {
             id: "mobile-app",
             name: "Mobile App Development",
-            icon: "/placeholder.svg?height=40&width=40",
+            icon: "/technology/mobileapp-icon.png",
             technologies: [
-                { name: "Swift", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Ionic", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Kotlin", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Flutter", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Xcode", logo: "/placeholder.svg?height=40&width=40" },
+                { name: "Swift", logo: "/technology/mobileapp-1.png" },
+                { name: "Ionic", logo: "/technology/mobileapp-2.png" },
+                { name: "Kotlin", logo: "/technology/mobileapp-3.png" },
+                { name: "Flutter", logo: "/technology/mobileapp-4.png" },
+                { name: "Xcode", logo: "/technology/mobileapp-5.png" },
             ],
         },
         {
             id: "database",
             name: "Database",
-            icon: "/placeholder.svg?height=40&width=40",
+            icon: "/technology/database-icon.png",
             technologies: [
-                { name: "MySQL", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Oracle", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "MongoDB", logo: "/placeholder.svg?height=40&width=40" },
+                { name: "MySQL", logo: "/technology/database-1.png" },
+                { name: "Oracle", logo: "/technology/database-2.png" },
+                { name: "MongoDB", logo: "/technology/database-3.png" },
             ],
         },
         {
             id: "servers",
             name: "Servers",
-            icon: "/placeholder.svg?height=40&width=40",
+            icon: "/technology/server-icon.png",
             technologies: [
-                { name: "AWS", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Google Cloud", logo: "/placeholder.svg?height=40&width=40" },
-                { name: "Azure", logo: "/placeholder.svg?height=40&width=40" },
+                { name: "AWS", logo: "/technology/server-1.png" },
+                { name: "Google Cloud", logo: "/technology/server-2.png" },
+                { name: "Azure", logo: "/technology/server-3.png" },
             ],
         },
     ]
@@ -141,17 +141,16 @@ export default function TechStack() {
                     </div>
 
                     {expandedCategories[category.id] && (
-                        <div className="py-4 px-4 pl-20 flex flex-wrap gap-8 items-center">
+                        <div className="py-6 px-4 pl-20 flex flex-wrap gap-8 items-center bg-[#F8F8F8]">
                             {category.technologies.map((tech, index) => (
-                                <div key={index} className="flex flex-col items-center gap-2">
+                                <div key={index} className="flex flex-col items-center gap-2 rounded-xl shadow-xl px-10 py-2">
                                     <Image
                                         src={tech.logo || "/placeholder.svg"}
                                         alt={tech.name}
-                                        width={100}
-                                        height={100}
+                                        width={158}
+                                        height={49}
                                         className="object-contain"
                                     />
-                                    {/* <span className="text-sm t ext-gray-600">{tech.name}</span> */}
                                 </div>
                             ))}
                         </div>
