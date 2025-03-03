@@ -1,14 +1,17 @@
+'use client'
+import ComponentTitle from '@/components/common/ComponentTitle'
 import CustomBadge from '@/components/common/customBadge'
 import HeaderTitle from '@/components/common/HeaderTitle'
-import React from 'react'
-import ImageGridLayout from './_components/grid-layout'
-import { portfolioDataDetails } from '@/data/project-details'
-import ComponentTitle from '@/components/common/ComponentTitle'
 import { HrDash } from '@/components/icons/hr-dash'
 import { StartSvg } from '@/components/icons/star-svg'
+import { portfolioDataDetails } from '@/data/project-details'
+import { useParams } from 'next/navigation'
+import ImageGridLayout from './_components/grid-layout'
 import { HeaderDetails } from './_components/HeaderDetails'
+import LiveProjectView from './_components/LiveProjectView'
 
 const PortfolioDetailsPage = () => {
+    const {id} = useParams()
     const { project, techOverview, projectFeatures } = portfolioDataDetails;
     return (
         <div className='container mx-auto mt-20'>
@@ -35,8 +38,8 @@ const PortfolioDetailsPage = () => {
             </div>
             <div className='mt-14'>
                 {
-                    projectFeatures?.map(project => (
-                        <div className='space-y-9'>
+                    projectFeatures?.map((project, index) => (
+                        <div key={`${project}-${index}`} className='space-y-9'>
                             <div className='flex gap-x-96 justify-between items-start w-full'>
                                 <div className='basis-56 mt-6'>
                                     <ComponentTitle title={project.title} />
@@ -59,10 +62,19 @@ const PortfolioDetailsPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <HrDash />
+                            {index + 1 !== projectFeatures.length && <HrDash />}
                         </div>
                     ))
                 }
+            </div>
+            <div className='my-16'>
+                <LiveProjectView
+                    key={`live-project-${id}`}
+                    imageUrl='/portfolio/portfolio-1/project-thumbnail.png'
+                    link='oneboardapp.com'
+                    title='Check live project'
+                    description='We combined the development stages in order to convey our vision to the client as best aspossible.'
+                />
             </div>
 
         </div>

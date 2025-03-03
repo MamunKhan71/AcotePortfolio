@@ -42,6 +42,11 @@ export const portfolioDataDetails: PortfolioData = {
         {
             title: "Project overview",
             description:
+                "Alpine Empower Banking successfully transformed its vision into reality by offering a comprehensive financial ecosystem that addressed clients’ needs for secure deposits and high-yield investment opportunities. This initiative not only ensured the safety of clients’ funds but also empowered them to achieve their financial aspirations with confidence and efficiency.", 
+        },
+        {
+            title: "Problem",
+            description:
                 "In today’s financial landscape, customers encounter difficulties in discovering a comprehensive banking solution that not only fosters financial growth with secured deposits and high yields but also prioritizes the safety of their funds.",
             key_point_description: "Here are some key challenges to consider when developing such a platform:",
             key_points: [

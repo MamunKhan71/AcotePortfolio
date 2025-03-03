@@ -1,7 +1,6 @@
-import React from 'react'
+import ContactUsBanner from '@/components/common/contact-us-banner'
 import PortfolioHeaderSection from './_component/PortfolioHeaderSection'
 import PortfolioMainSection from './_component/PortfolioMainSection'
-import ContactUsBanner from '@/components/common/contact-us-banner'
 
 const OurPortfolio = () => {
     return (
