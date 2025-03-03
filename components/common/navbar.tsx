@@ -1,12 +1,12 @@
 'use client'
 import { services } from "@/data/navbar-menu";
 import { AnimatePresence, motion } from 'framer-motion';
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode, useState } from "react";
 import { Button } from "../ui/button";
 import { Card, CardHeader } from "../ui/card";
-import { ChevronDown, ChevronUp } from "lucide-react";
 const NavigationMenu = () => {
     const [open, setOpen] = useState(false)
     return (
@@ -18,7 +18,7 @@ const NavigationMenu = () => {
                     </Link>
                     <div className="flex items-center gap-16 w-full justify-end">
                         <ul className="flex gap-12 items-center">
-                            <li>Home</li>
+                            <li><Link href={'/'}>Home</Link></li>
                             <li>
                                 <MyComponentFlyout href="/our-services" FlyoutContent open={open} setOpen={setOpen}>
                                     <p className="inline-flex gap-2 items-center transition-all duration-500 ease-in-out delay-300">
@@ -26,7 +26,9 @@ const NavigationMenu = () => {
                                     </p>
                                 </MyComponentFlyout>
                             </li>
-                            <li>Portfolio</li>
+                            <li>
+                                <Link href={'/our-portfolio'}>Portfolio</Link>
+                            </li>
                             <li>About</li>
                             <li>Contact</li>
                         </ul>

@@ -2,6 +2,7 @@ export interface blogsDataTypes {
     imageUrl: string,
     category: string,
     title: string,
+    isVisible?: boolean,
 }
 export const blogsData: blogsDataTypes[] = [
     {

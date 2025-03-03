@@ -16,7 +16,7 @@ const OurProjects = ({ isService }: { isService: boolean }) => {
             </div>
             <div className='grid grid-cols-3 gap-7 mt-14 w-full h-full pb-28'>
                 {
-                    blogsData?.map((blog, index) => <ProjectCards key={`blog-${index}`} title={blog.title} imageUrl={blog.imageUrl} category={blog.category} />)
+                    blogsData?.map((blog, index) => <ProjectCards key={`blog-${index}`} title={blog.title} imageUrl={blog.imageUrl} category={blog.category} isVisible={true}/>)
                 }
             </div>
         </div>
