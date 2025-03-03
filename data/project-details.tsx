@@ -5,67 +5,31 @@ type Project = {
     portfolioSnapshots: string[],
 };
 
-type Problem = {
-    description: string;
-    challenges: string[];
-};
-
-type Research = {
-    sources: string[];
-};
-
-type Workflow = {
-    steps: string[];
-};
-
-type Solutions = {
-    investment_opportunities: string;
-    security_measures: string[];
-    user_empowerment: string;
-};
-
 type techOverview = {
     title: string,
     description: string
 }
+type projectFeatures = {
+    title: string,
+    description?: string,
+    key_point_description?: string,
+    key_points?: string[],
+}
 
-type Contact = {
-    office: string;
-    phone: string;
-    email: string;
-};
-
-type Company = {
-    name: string;
-    services: string[];
-    location: string;
-    contact: Contact;
-};
-
-type Legal = {
-    copyright: string;
-    policies: string[];
-};
 
 type PortfolioData = {
     project: Project;
-    problem: Problem;
-    research: Research;
-    workflow: Workflow;
-    solutions: Solutions;
-    features: string[];
+    projectFeatures: projectFeatures[];
     techOverview: techOverview[];
-    customer: string;
-    contact: Contact;
-    company: Company;
-    legal: Legal;
 };
 
 export const portfolioDataDetails: PortfolioData = {
     project: {
         name: "Empower your finance with alpine banking",
         overview:
-            "Alpine Empower Banking successfully transformed its vision into reality by offering a comprehensive financial ecosystem that addressed clients’ needs for secure deposits and high-yield investment opportunities. This initiative ensured the safety of clients’ funds and empowered them to achieve their financial aspirations efficiently.",
+            `
+            Alpine Empower Banking successfully transformed its vision into reality by offering a comprehensive financial ecosystem that addressed clients’ needs for secure deposits and high-yield investment opportunities. This initiative not only ensured the safety of clients’ funds but also empowered them to achieve their financial aspirations with confidence and efficiency.
+            `,
         categories: ["Fintech", "Web"],
         portfolioSnapshots: [
             "/portfolio/portfolio-1/p1-image.png",
@@ -74,48 +38,47 @@ export const portfolioDataDetails: PortfolioData = {
             "/portfolio/portfolio-1/p4-image.png",
         ],
     },
-    problem: {
-        description:
-            "Customers face difficulties in finding a banking solution that ensures financial growth with secure deposits and high returns while maintaining the safety of their funds.",
-        challenges: [
-            "Lack of seamless access to funds and convenient banking experiences.",
-            "Need for a customer-centric banking platform with secure deposits, high yields, and international visa card benefits.",
-        ],
-    },
-    research: {
-        sources: [
-            "YouTube videos for industry trends and customer preferences",
-            "Reputable articles for market dynamics and compliance",
-            "Brainstorming sessions for idea generation",
-        ],
-    },
-    workflow: {
-        steps: [
-            "Stakeholder discussions to understand objectives, user needs, and market demands.",
-            "Market research to identify trends, competitors, and innovation opportunities.",
-            "Defined project scope, objectives, deliverables, and timelines.",
-            "Collaborated with design teams for intuitive user interfaces.",
-            "Conducted rigorous testing for functionality assurance.",
-        ],
-    },
-    solutions: {
-        investment_opportunities:
-            "High-yield investment opportunities to combat stagnant funds.",
-        security_measures: [
-            "Cutting-edge encryption protocols",
-            "Multi-factor authentication",
-            "Robust deposit protection system",
-        ],
-        user_empowerment:
-            "Holistic financial management for short-term and long-term goals.",
-    },
-    features: [
-        "Data-Driven Insights",
-        "Consistent UI Design",
-        "User Ratings & Feedback",
-        "Improved Navigation",
-        "Product Order History",
-        "Descriptive Text",
+    projectFeatures: [
+        {
+            title: "Project overview",
+            description:
+                "In today’s financial landscape, customers encounter difficulties in discovering a comprehensive banking solution that not only fosters financial growth with secured deposits and high yields but also prioritizes the safety of their funds.",
+            key_point_description: "Here are some key challenges to consider when developing such a platform:",
+            key_points: [
+                "The lack of seamless access to funds and convenient banking experiences further exacerbates these challenges",
+                "This underscores the necessity for an innovative, customer-centric banking platform that encompasses secure deposits with attractive returns, accompanied by the added convenience of international visa card benefits",
+                "Such a platform will effectively address the pain points of modern consumers, revolutionize their banking experience, and cater to their evolving needs in a dynamic global economy"
+            ]
+        },
+        {
+            title: "Challanges",
+            key_point_description: "Here are some key challenges to consider when developing such a platform:",
+            key_points: [
+                "Alpine Empower Banking's research phase included diverse sources: YouTube videos for industry trends, customer preferences, and banking solutions; reputable articles for market dynamics and compliance; and brainstorming sessions to generate creative ideas and address challenges effectively.",
+                "This approach formed a solid foundation for developing their exceptional financial solution."
+            ]
+        },
+        {
+            title: "Workflow scenario",
+            description: "The project team initiated discussions with stakeholders to understand the core objectives, user needs, and market demands.Conducted comprehensive market research to identify trends, competitors, and potential opportunities for innovation.Defined the scope, objectives, deliverables, and timelines for the project.Collaborated with design teams to create intuitive and user- friendly interfaces and Conducted rigorous testing of all features and functionalities to ensure they function as intended"
+        },
+        {
+            title: "Solutions",
+            description: `
+            The project focused on addressing the common challenge of stagnant funds by offering high-yield investment opportunities. Through meticulous market research and strategic partnerships, Alpine Empower curated diverse investment options, enabling clients to grow their wealth effectively.
+            `,
+            key_points: [
+                "Recognizing the importance of security in financial transactions, Alpine Empower prioritized building a robust system that guaranteed the safety of clients' deposits.",
+                "By implementing cutting-edge security measures, including encryption protocols and multi-factor authentication, the platform ensured data protection and instilled trust among users",
+                "This approach empowered users to manage their finances holistically, catering to both short-term needs and long-term goals.",
+                "Data-Driven Insights",
+                "Consistent UI design",
+                "User ratings & feedback",
+                "Improved Navigation",
+                "Product order history",
+                "Descriptive Text",
+            ]
+        }
     ],
     techOverview: [
         {
@@ -131,30 +94,4 @@ export const portfolioDataDetails: PortfolioData = {
             description: 'Confidential'
         }
     ],
-    customer: "Confidential",
-    contact: {
-        office: "6th Floor, DTX Business Center, Pragati Sarani Road, Dhaka 1229",
-        phone: "(629) 555-0129",
-        email: "info@acotegroup.com",
-    },
-    company: {
-        name: "Acote Group",
-        services: [
-            "BPO",
-            "Design Solution",
-            "Digital Marketing",
-            "IT Solution",
-        ],
-        location:
-            "DTX Business Center, 6th Floor, Plot no. 1176 & 1543, Pragati Sarani Road, Kuril, Dhaka 1229",
-        contact: {
-            office: "6th Floor, DTX Business Center, Pragati Sarani Road, Dhaka 1229",
-            phone: "+880 1758 388865",
-            email: "hr@acotegroup.com",
-        },
-    },
-    legal: {
-        copyright: "© 2025 Acote Group. All Rights Reserved.",
-        policies: ["Privacy Policy", "Terms and Conditions"],
-    },
 };
