@@ -30,7 +30,7 @@ export default function PortfolioMainSection() {
     const TOTAL_ITEMS = filteredProjects?.length
     useEffect(() => {
         if (activeTab === "All") {
-            setFilteredProjects(portfolioData); 
+            setFilteredProjects(portfolioData);
         } else {
             const updatedData = portfolioData?.filter(portfolio => portfolio.category === activeTab);
             setFilteredProjects(updatedData);
@@ -71,7 +71,7 @@ export default function PortfolioMainSection() {
                 <div className='h-full w-full'>
                     <div className='grid grid-cols-3 gap-7 mt-14 w-full h-full pb-6'>
                         {
-                            currentItems?.map((blog, index) => <ProjectCards key={`blog-${index}`} title={blog.title} imageUrl={blog.imageUrl} category={blog.category} isVisible={false} />)
+                            currentItems?.map((project, index) => <ProjectCards key={`project-${index}`} title={project.title} imageUrl={project.imageUrl} category={project.category} isVisible={false} id={project.id} />)
                         }
                     </div>
                 </div>
