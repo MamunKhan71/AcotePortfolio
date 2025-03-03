@@ -11,7 +11,7 @@ import { HeaderDetails } from './_components/HeaderDetails'
 import LiveProjectView from './_components/LiveProjectView'
 
 const PortfolioDetailsPage = () => {
-    const {id} = useParams()
+    const { id } = useParams()
     const { project, techOverview, projectFeatures } = portfolioDataDetails;
     return (
         <div className='container mx-auto mt-20'>
@@ -45,21 +45,22 @@ const PortfolioDetailsPage = () => {
                                     <ComponentTitle title={project.title} />
                                 </div>
                                 <div className='flex-1 text-[#353539] text-lg md:leading-[27px]'>
-                                    <p className='mt-6'>{project?.description}</p>
-                                    <p className='mt-6'>{project.key_point_description}</p>
-                                    <div className='mt-6'>
-                                        <ul className='space-y-2'>
-                                            {project?.key_points?.map((challange, index) => (
-                                                <li key={`challanges-${index}`} className='flex gap-2 items-start'>
-                                                    <div>
-                                                        <StartSvg />
-                                                    </div>
-                                                    {challange}
-                                                </li>
-                                            ))}
-                                        </ul>
-
-                                    </div>
+                                    {project?.description && <p className='mt-6'>{project?.description}</p>}
+                                    {project?.key_point_description && <p className='mt-6'>{project.key_point_description}</p>}
+                                    {project?.key_points && (
+                                        <div className='mt-6'>
+                                            <ul className='space-y-2'>
+                                                {project?.key_points?.map((challange, index) => (
+                                                    <li key={`challanges-${index}`} className='flex gap-2 items-start'>
+                                                        <div>
+                                                            <StartSvg />
+                                                        </div>
+                                                        {challange}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                             {index + 1 !== projectFeatures.length && <HrDash />}
