@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { founderInfo } from '@/data/our-team'
 import { useState } from 'react'
 import FounderSection from './team-founder/FounderSection'
+import SisterConcernSection from './team-founder/SisterConcernSection'
 
 const buttons = [
     { id: 'founder', label: 'Founders & Leaders' },
@@ -36,6 +37,7 @@ const OurTeam = () => {
                     {
                         activeButton === 'founder' && <FounderSection founders={founderInfo} />
                     }
+                    <SisterConcernSection />
                 </div>
             </div>
         </div>
