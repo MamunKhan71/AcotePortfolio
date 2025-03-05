@@ -36,7 +36,9 @@ const NavigationMenu = () => {
                                 <Link href={'/contact-us'}>Contact</Link>
                             </li>
                         </ul>
-                        <Button variant={'default'}>Book an appointment</Button>
+                        <Link href={'/book-appointment'}>
+                            <Button variant={'default'}>Book an appointment</Button>
+                        </Link>
                     </div>
                 </div>
             </div>
