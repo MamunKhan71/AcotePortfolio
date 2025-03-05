@@ -15,10 +15,9 @@ interface ContactDetailProps {
 const ContactDetail: React.FC<ContactDetailProps> = ({ title, content }) => (
     <div>
         <h3 className="text-lg font-light text-[#6E6E6E] md:leading-[23.4px]">{title}</h3>
-        <p className='text-lg font-normal md:leading-[27px]'>{content}</p>
+        <div className='text-lg font-normal md:leading-[27px]'>{content}</div>
     </div>
 );
-
 const ContactInfo: React.FC = () => {
     return (
         <div className="bg-white">
@@ -37,14 +36,14 @@ const ContactInfo: React.FC = () => {
 
             <div className="mt-16 space-y-6">
                 <ContactDetail title="Drop us a line" content={contactData.email} />
-                <ContactDetail 
-                    title="Main office" 
+                <ContactDetail
+                    title="Main office"
                     content={
-                        <>
+                        <div>
                             <p className="mb-1">{contactData.address.line1}</p>
                             <p>{contactData.address.line2}</p>
-                        </>
-                    } 
+                        </div>
+                    }
                 />
                 <ContactDetail title="Contacts" content={contactData.phone} />
             </div>
