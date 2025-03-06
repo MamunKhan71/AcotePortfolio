@@ -2,7 +2,7 @@ import Footer from "@/components/common/footer/footer";
 import InfoBar from "@/components/common/Info-bar";
 import Navbar from "@/components/common/navbar";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Roboto, Space_Grotesk } from "next/font/google";
+import { Roboto, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -15,10 +15,6 @@ const grotesk = Space_Grotesk({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700']
 })
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Acote Group",
@@ -33,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistMono.variable} antialiased ${roboto.variable} ${grotesk.variable} font-roboto`}
+        className={`antialiased ${roboto.variable} ${grotesk.variable} font-roboto`}
       >
         <InfoBar />
         <Navbar />
