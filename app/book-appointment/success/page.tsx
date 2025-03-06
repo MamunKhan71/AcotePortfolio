@@ -1,11 +1,12 @@
 "use client"
 
+import { Suspense } from "react"
 import HeaderSection from "@/components/PortfolioHeaderSection"
 import { CheckCircle, Clock, Notebook, User, Video } from "lucide-react"
 import Image from "next/image"
 import { useSearchParams } from "next/navigation"
 
-export default function ConfirmationPage() {
+function ScheduleConfirmation() {
     const searchParams = useSearchParams()
     const queryData = Object.fromEntries(searchParams.entries())
 
@@ -48,23 +49,24 @@ export default function ConfirmationPage() {
                         <div className="flex items-center gap-3 text-gray-600">
                             <Clock className="h-5 w-5 text-gray-400 flex-shrink-0" />
                             <span>
-                                {`${new Date(queryData.attendeeStartTime).toLocaleDateString("en-US", {
-                                    weekday: "long",
-                                    year: "numeric",
-                                    month: "long",
-                                    day: "numeric",
-                                })}, ${new Date(queryData.attendeeStartTime).toLocaleTimeString("en-US", {
-                                    hour: "2-digit",
-                                    minute: "2-digit",
-                                    hour12: true,
-                                })} - ${new Date(queryData.endTime).toLocaleTimeString("en-US", {
-                                    hour: "2-digit",
-                                    minute: "2-digit",
-                                    hour12: true,
-                                })}`}
+                                {queryData.attendeeStartTime
+                                    ? `${new Date(queryData.attendeeStartTime).toLocaleDateString("en-US", {
+                                          weekday: "long",
+                                          year: "numeric",
+                                          month: "long",
+                                          day: "numeric",
+                                      })}, ${new Date(queryData.attendeeStartTime).toLocaleTimeString("en-US", {
+                                          hour: "2-digit",
+                                          minute: "2-digit",
+                                          hour12: true,
+                                      })} - ${new Date(queryData.endTime).toLocaleTimeString("en-US", {
+                                          hour: "2-digit",
+                                          minute: "2-digit",
+                                          hour12: true,
+                                      })}`
+                                    : "Time not available"}
                             </span>
                         </div>
-
 
                         <div className="flex items-center gap-3 text-gray-600">
                             <Video className="h-5 w-5 text-gray-400 flex-shrink-0" />
@@ -79,5 +81,13 @@ export default function ConfirmationPage() {
                 </div>
             </div>
         </div>
+    )
+}
+
+export default function ConfirmationPage() {
+    return (
+        <Suspense fallback={<div className="text-center p-4">Loading...</div>}>
+            <ScheduleConfirmation />
+        </Suspense>
     )
 }
