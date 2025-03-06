@@ -1,48 +1,69 @@
 'use client'
 import { services } from "@/data/navbar-menu";
 import { AnimatePresence, motion } from 'framer-motion';
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode, useState } from "react";
 import { Button } from "../ui/button";
 import { Card, CardHeader } from "../ui/card";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
+
 const NavigationMenu = () => {
     const [open, setOpen] = useState(false)
+
     return (
         <div className="w-full shadow-sm py-2">
-            <div className="relative flex items-center justify-between container mx-auto w-full font-roboto">
-                <div className="flex justify-between items-center w-full">
-                    <Link href={'/'}>
-                        <Image src={'/acote-logo.png'} alt="acote group logo" width={118} height={67} />
+            <div className="relative flex items-center justify-between container mx-auto w-full font-roboto px-4 md:px-0">
+                <Link href={'/'}>
+                    <Image src={'/acote-logo.png'} alt="acote group logo" width={118} height={67} />
+                </Link>
+
+                {/* Desktop Menu */}
+                <div className="hidden md:flex items-center gap-16 w-full justify-end">
+                    <ul className="flex gap-12 items-center">
+                        <li><Link href={'/'}>Home</Link></li>
+                        <li>
+                            <MyComponentFlyout href="/our-services" FlyoutContent open={open} setOpen={setOpen}>
+                                <p className="inline-flex gap-2 items-center transition-all duration-500 ease-in-out delay-300">
+                                    Service {!open ? <ChevronDown size={20} className="transition-transform duration-300" /> : <ChevronDown size={20} className="transition-transform duration-300 rotate-180" />}
+                                </p>
+                            </MyComponentFlyout>
+                        </li>
+                        <li><Link href={'/our-portfolio'}>Portfolio</Link></li>
+                        <li><Link href={'/about-us'}>About</Link></li>
+                        <li><Link href={'/contact-us'}>Contact</Link></li>
+                        <li><Link href={'/events'}>Events</Link></li>
+                    </ul>
+                    <Link href={'/book-appointment'}>
+                        <Button variant={'default'}>Book an appointment</Button>
                     </Link>
-                    <div className="flex items-center gap-16 w-full justify-end">
-                        <ul className="flex gap-12 items-center">
-                            <li><Link href={'/'}>Home</Link></li>
-                            <li>
-                                <MyComponentFlyout href="/our-services" FlyoutContent open={open} setOpen={setOpen}>
-                                    <p className="inline-flex gap-2 items-center transition-all duration-500 ease-in-out delay-300">
-                                        Service {!open ? <ChevronDown size={20} className="transition-transform duration-300" /> : <ChevronDown size={20} className="transition-transform duration-300 rotate-180" />}
-                                    </p>
-                                </MyComponentFlyout>
-                            </li>
-                            <li>
-                                <Link href={'/our-portfolio'}>Portfolio</Link>
-                            </li>
-                            <li>
-                                <Link href={'/about-us'}>About</Link>
-                            </li>
-                            <li>
-                                <Link href={'/contact-us'}>Contact</Link>
-                            </li>
-                            <li>
-                                <Link href={'/events'}>Events</Link>
-                            </li>
-                        </ul>
-                        <Link href={'/book-appointment'}>
-                            <Button variant={'default'}>Book an appointment</Button>
-                        </Link>
-                    </div>
+                </div>
+
+                {/* Mobile Menu */}
+                <div className="md:hidden">
+                    <Sheet>
+                        <SheetTrigger asChild>
+                            <Button variant="ghost" size="icon">
+                                <Menu size={24} />
+                            </Button>
+                        </SheetTrigger>
+
+                        <SheetTitle></SheetTitle>
+                        <SheetContent side="left" className="w-64 p-5">
+                            <ul className="flex flex-col gap-4">
+                                <li><Link href={'/'}>Home</Link></li>
+                                <li><Link href={'/our-services'}>Services</Link></li>
+                                <li><Link href={'/our-portfolio'}>Portfolio</Link></li>
+                                <li><Link href={'/about-us'}>About</Link></li>
+                                <li><Link href={'/contact-us'}>Contact</Link></li>
+                                <li><Link href={'/events'}>Events</Link></li>
+                            </ul>
+                            <Link href={'/book-appointment'} className="mt-4 block">
+                                <Button variant={'default'} className="w-full">Book an appointment</Button>
+                            </Link>
+                        </SheetContent>
+                    </Sheet>
                 </div>
             </div>
         </div>
@@ -51,37 +72,31 @@ const NavigationMenu = () => {
 
 export default NavigationMenu;
 
-
 const MyComponentFlyout = ({ open, setOpen, children, href = "", FlyoutContent }: { open: boolean, children: ReactNode, href: string, FlyoutContent: boolean, setOpen: (open: boolean) => void }) => {
-    const showFlyout = open && FlyoutContent
+    const showFlyout = open && FlyoutContent;
     return (
-        <div
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}>
+        <div onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
             <Link href={href} className="text-black">
                 {children}
             </Link>
             <AnimatePresence>
-                {
-                    showFlyout &&
+                {showFlyout && (
                     <motion.div
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 15 }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}
                         style={{ x: '-50%' }}
-                        className="absolute z-50 top-16 left-1/2 w-full">
-                        <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent">
-                        </div>
+                        className="absolute z-50 top-16 left-1/2 w-full"
+                    >
+                        <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent"></div>
                         <ServiceDropdownMenu />
                     </motion.div>
-                }
+                )}
             </AnimatePresence>
         </div>
-    )
-
-}
-
+    );
+};
 
 const ServiceDropdownMenu = () => {
     return (
@@ -110,19 +125,11 @@ const ServiceDropdownMenu = () => {
                             </div>
                             <Button variant="link" size="sm" className="h-auto p-0 text-sm font-semibold text-[#FF5E5E] shadow-none">
                                 All Services
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M17.3172 10.4422L11.6922 16.0672C11.5749 16.1844 11.4159 16.2503 11.25 16.2503C11.0841 16.2503 10.9251 16.1844 10.8078 16.0672C10.6905 15.9499 10.6247 15.7908 10.6247 15.625C10.6247 15.4591 10.6905 15.3001 10.8078 15.1828L15.3664 10.625H3.125C2.95924 10.625 2.80027 10.5591 2.68306 10.4419C2.56585 10.3247 2.5 10.1657 2.5 9.99998C2.5 9.83422 2.56585 9.67525 2.68306 9.55804C2.80027 9.44083 2.95924 9.37498 3.125 9.37498H15.3664L10.8078 4.81717C10.6905 4.69989 10.6247 4.54083 10.6247 4.37498C10.6247 4.20913 10.6905 4.05007 10.8078 3.93279C10.9251 3.81552 11.0841 3.74963 11.25 3.74963C11.4159 3.74963 11.5749 3.81552 11.6922 3.93279L17.3172 9.55779C17.3753 9.61584 17.4214 9.68477 17.4529 9.76064C17.4843 9.83652 17.5005 9.91785 17.5005 9.99998C17.5005 10.0821 17.4843 10.1634 17.4529 10.2393C17.4214 10.3152 17.3753 10.3841 17.3172 10.4422Z" fill="#FF5E5E" />
-                                </svg>
                             </Button>
                         </div>
                     ))}
                 </div>
             </CardHeader>
         </Card>
-    )
-}
-
-
-const colorProfile = () => {
-
-}
+    );
+};

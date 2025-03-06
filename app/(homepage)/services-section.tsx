@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button"
 import { services } from "@/data/our-services"
 import { useState } from "react"
 
-
 export default function ServicesSection() {
     const [activeService, setActiveService] = useState(0)
 
@@ -19,8 +18,8 @@ export default function ServicesSection() {
     }
 
     return (
-        <section className="container mx-auto mt-28">
-            <div className="space-y-6">
+        <section className="container mx-auto mt-20 md:mt-28 px-4 md:px-0">
+            <div className="space-y-4 md:space-y-6">
                 <div>
                     <div className="space-y-2">
                         <HeaderBadge title="our services" />
@@ -32,39 +31,36 @@ export default function ServicesSection() {
                     </p>
                 </div>
 
-                <div className="relative grid lg:grid-cols-[300px,1fr] gap-24 mt-12">
+                <div className="relative grid grid-cols-1 lg:grid-cols-[300px,1fr] gap-8 md:gap-16 mt-6 md:mt-12">
                     {/* Services List */}
                     <div>
                         {services.map((service, index) => (
                             <button
                                 key={service.id}
                                 onClick={() => setActiveService(index)}
-                                className={`relative w-full text-left px-4 py-[11px] hover:bg-muted rounded-lg transition-colors ${index === activeService ? "bg-muted" : ""
-                                    }`}
+                                className={`relative w-full text-left px-4 py-[11px] hover:bg-muted rounded-lg transition-colors ${index === activeService ? "bg-muted" : ""}`}
                             >
                                 <div className="flex items-center gap-4">
                                     <span className="text-sm text-muted-foreground">{String(service.id).padStart(2, "0")}.</span>
                                     <span className={index === activeService ? "text-emerald-500 font-medium" : ""}>{service.name}</span>
                                 </div>
-                                {
-                                    index === activeService && <div className="w-1.5 rounded-full -left-0.5 z-10 bg-primary h-full absolute top-0">
-                                    </div>
-                                }
+                                {index === activeService && (
+                                    <div className="w-1.5 rounded-full -left-0.5 z-10 bg-primary h-full absolute top-0"></div>
+                                )}
                             </button>
                         ))}
-                        <div className="h-full border top-0 absolute">
-                        </div>
+                        <div className="h-full border top-0 absolute"></div>
                     </div>
 
                     {/* Active Service Content */}
-                    <div className="relative overflow-hidden shadow-[0_0px_10px_rgba(0,0,0,0.05)] rounded-2xl p-[44px]">
-                        <div className="flex gap-14 justify-between h-full w-full items-start">
+                    <div className="relative overflow-hidden shadow-[0_0px_10px_rgba(0,0,0,0.05)] rounded-2xl p-[24px] md:p-[44px]">
+                        <div className="flex flex-col md:flex-row gap-10 md:gap-14 justify-between h-full w-full items-start">
                             <div className="flex-1 space-y-6 flex flex-col justify-between h-full w-auto">
                                 <span className="inline-flex px-4 py-1.5 bg-primary/10 backdrop-blur-sm border border-primary/80 w-fit rounded-lg text-base font-semibold text-primary">
                                     {services[activeService].tag}
                                 </span>
                                 <div className="space-y-5">
-                                    <h3 className="text-3xl font-bold max-w-sm">{services[activeService].title}</h3>
+                                    <h3 className="text-2xl md:text-3xl font-bold max-w-sm">{services[activeService].title}</h3>
                                     <p className="text-muted-foreground text-lg max-w-xs">{services[activeService].description}</p>
                                 </div>
                                 <div>
@@ -83,7 +79,7 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Navigation */}
-                <div className="flex gap-2 mt-8">
+                <div className="flex gap-2 mt-8 justify-center md:justify-start">
                     <Button variant="outline" size="icon" onClick={prevService} className="rounded-full text-gray-400">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M19 12H5" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -101,4 +97,3 @@ export default function ServicesSection() {
         </section>
     )
 }
-

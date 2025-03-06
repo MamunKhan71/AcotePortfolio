@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <div className="space-y-28">
+      <div className="space-y-20 md:space-y-28">
         <ServicesSection />
         <OurJourney />
         <OurProjects isService={false} />
       </div>
-      <div className="space-y-28 mt-28">
+      <div className="space-y-20 md:space-y-28 mt-20 md:mt-28">
         <OurPartners />
         <ClientTestimonial />
         <OurEvents />
