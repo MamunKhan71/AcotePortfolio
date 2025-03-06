@@ -12,6 +12,7 @@ const roboto = Roboto({
 })
 const grotesk = Space_Grotesk({
   variable: "--font-grotesk",
+  subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700']
 })
 const geistMono = Geist_Mono({
