@@ -70,7 +70,7 @@ const ContactForm: React.FC = () => {
 
         if (errors[name]) {
             setErrors((prev) => {
-                const { [name]: _, ...rest } = prev;
+                const { [name]: removedError, ...rest } = prev;
                 return rest;
             });
         }

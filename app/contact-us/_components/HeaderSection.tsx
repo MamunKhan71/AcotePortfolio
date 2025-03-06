@@ -19,7 +19,7 @@ export default function HeaderSection() {
                         {/* Hero section */}
                         <div>
                             <h1 className="text-5xl md:text-[75px] font-bold tracking-wide">
-                                Let's work
+                                Let&apos;s work
                                 <div className="flex items-center gap-2">
                                     <div className="w-[61px] h-[8px] bg-[#21B24B]"></div>
                                     <span>together.</span>

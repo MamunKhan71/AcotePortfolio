@@ -11,7 +11,7 @@ interface PaginationProps {
   }>
 }
 
-export default function Pagination({ currentPage, totalPages, onPageChange, data = [] }: PaginationProps) {
+export default function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) {
   // Don't render pagination if there's only one page
 //   if (totalPages <= 1) return null
 
