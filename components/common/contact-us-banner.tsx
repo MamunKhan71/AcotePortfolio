@@ -1,6 +1,4 @@
-import React from 'react'
 import { Button } from '../ui/button'
-import IconRightArrow from '../icons/iconRightArrow'
 
 const ContactUsBanner = () => {
   return (
@@ -8,10 +6,10 @@ const ContactUsBanner = () => {
       style={{ backgroundImage: `url('/contact-us-banner.png')` }}
       className='h-full w-full text-white'
     >
-      <div className='container mx-auto py-16 space-y-11'>
-        <div className='space-y-5'>
-          <h1 className='text-[56px] font-medium'>Work With Us</h1>
-          <p className='text-2xl font-medium'>Join us to accelerate<br />
+      <div className='container mx-auto py-14 md:py-16 space-y-8 md:space-y-11 px-4 md:px-0'>
+        <div className='space-y-3 md:space-y-5'>
+          <h1 className='text-4xl md:text-[56px] font-medium'>Work With Us</h1>
+          <p className='text-xl md:text-2xl font-medium'>Join us to accelerate<br className='hidden md:block'/>
             technology adoption together!</p>
         </div>
         <Button className='bg-white text-secondary'>Submit Request <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15" fill="none">
