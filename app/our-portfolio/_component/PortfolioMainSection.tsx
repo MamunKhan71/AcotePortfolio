@@ -2,10 +2,10 @@
 
 import ProjectCards from "@/components/common/ProjectCards";
 import { Button } from "@/components/ui/button";
+import { portfolioData } from "@/data/portfolio-data";
 import { cn } from "@/lib/utils"; // Ensure you have this utility
 import { useEffect, useState } from "react";
 import Pagination from "./Pagination";
-import { portfolioData } from "@/data/portfolio-data";
 
 const tabs = [
     "All",
@@ -51,7 +51,7 @@ export default function PortfolioMainSection() {
 
     return (
         <div>
-            <div className="flex flex-wrap gap-[18px] mt-[50px] p-4 justify-center max-w-5xl mx-auto w-full h-full">
+            <div className="flex flex-wrap gap-3 md:gap-[18px] mt-8 md:mt-[50px] md:p-4 justify-center md:max-w-5xl mx-auto w-full h-full">
                 {tabs.map((tab) => (
                     <Button
                         key={tab}
@@ -69,7 +69,7 @@ export default function PortfolioMainSection() {
             </div>
             <div>
                 <div className='h-full w-full'>
-                    <div className='grid grid-cols-3 gap-7 mt-14 w-full h-full pb-6'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7 mt-8 md:mt-14 w-full h-full pb-6'>
                         {
                             currentItems?.map((project, index) => <ProjectCards key={`project-${index}`} title={project.title} imageUrl={project.imageUrl} category={project.category} isVisible={false} id={project.id} />)
                         }

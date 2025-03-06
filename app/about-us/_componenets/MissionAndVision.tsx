@@ -4,7 +4,7 @@ import React from 'react'
 
 const MissionAndVision = () => {
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto px-4 md:px-0'>
             <div className='grid grid-cols-1 md:grid-cols-2'>
                 <MissionVisionCard
                     svgIcon={<StarIcon />}
@@ -27,13 +27,11 @@ export default MissionAndVision
 
 const MissionVisionCard = ({ svgIcon, title, description }: { svgIcon: React.ReactNode, title: string, description: string }) => (
     <div className='border border-[#ECECEC] py-9 px-14'>
-        <div className='flex items-start gap-7 w-full'>
-            <div>
-                {svgIcon}
-            </div>
-            <div className='space-y-4'>
-                <p className='text-2xl font-medium md:leading-[35px] w-full'>{title}</p>
-                <p className='text-xl md:leading-[36px] text-[#000000b3] w-full'>{description}</p>
+        <div className='flex flex-col md:flex-row items-center justify-center md:justify-start md:items-start gap-4 md:gap-7 w-full'>
+            {svgIcon}
+            <div className='space-y-4 text-center md:text-left'>
+                <p className='text-xl md:text-2xl font-medium md:leading-[35px] w-full'>{title}</p>
+                <p className='text-base md:text-xl md:leading-[36px] text-[#000000b3] w-full'>{description}</p>
             </div>
         </div>
     </div>
