@@ -97,7 +97,7 @@ const ContactForm: React.FC = () => {
     };
 
     return (
-        <div className="bg-[#F2F2F7] p-9 rounded-lg">
+        <div className="bg-[#F2F2F7] px-4 py-8 md:p-9 rounded-lg">
             <h2 className="text-2xl font-medium mb-3">How can we help you?</h2>
             <p className="text-lg mb-10">Describe your request and tell us about your project idea</p>
 

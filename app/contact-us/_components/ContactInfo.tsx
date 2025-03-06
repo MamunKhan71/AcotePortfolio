@@ -20,8 +20,8 @@ const ContactDetail: React.FC<ContactDetailProps> = ({ title, content }) => (
 );
 const ContactInfo: React.FC = () => {
     return (
-        <div className="bg-white">
-            <h2 className="text-[28px] mb-6 text-[#1E2228]">What we'll do next?</h2>
+        <div className="px-4 md:px-0">
+            <h2 className="text-xl md:text-[28px] mb-4 md:mb-6 text-[#1E2228]">What we'll do next?</h2>
 
             <div className="space-y-6">
                 {steps.map((step, index) => (
@@ -34,7 +34,7 @@ const ContactInfo: React.FC = () => {
                 ))}
             </div>
 
-            <div className="mt-16 space-y-6">
+            <div className="mt-8 md:mt-16 space-y-4 md:space-y-6">
                 <ContactDetail title="Drop us a line" content={contactData.email} />
                 <ContactDetail
                     title="Main office"
