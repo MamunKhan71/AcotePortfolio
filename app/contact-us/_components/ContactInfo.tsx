@@ -1,4 +1,4 @@
-import { contactData } from '@/data/contact-info'
+import { contactData } from '@/data/contact-info';
 
 const steps: string[] = [
     "We will contact you within 24 hours",

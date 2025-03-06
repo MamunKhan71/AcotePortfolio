@@ -22,7 +22,7 @@ export default function CalendarScheduler() {
                     config={{ "layout": "month_view" }}
                 />
             </div>
-            <div className="bg-white absolute bottom-0 z-30 py-8 px-12 left-1/2 -translate-x-1/2">
+            <div className="hidden md:block bg-white absolute bottom-0 z-30 py-8 px-12 left-1/2 -translate-x-1/2">
             </div>
         </div>
     )

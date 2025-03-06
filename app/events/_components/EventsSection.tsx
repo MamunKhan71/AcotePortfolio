@@ -42,8 +42,8 @@ export default function EventSection() {
     }
 
     return (
-        <div className="mb-[50px] space-y-10">
-            <div className="flex flex-wrap gap-[18px] mt-[50px] p-4 justify-center max-w-5xl mx-auto w-full h-full">
+        <div className="mb-10 md:mb-[50px] space-y-10">
+            <div className="flex flex-wrap gap-[18px] mt-10 md:mt-[50px] p-4 justify-center md:max-w-5xl mx-auto w-full h-full">
                 {tabs.map((tab) => (
                     <Button
                         key={tab}
@@ -61,7 +61,7 @@ export default function EventSection() {
             </div>
             <div>
                 <div className='h-full w-full mt-10'>
-                    <div className='grid grid-cols-3 gap-8 w-full'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 w-full'>
                         {
                             currentItems?.map((event, index) => <EventCard key={`event${index}`} image={event.image} date={event.date} title={event.title} category={event.category} isVideo={event.isVideo} video={event.video}/>)
                         }

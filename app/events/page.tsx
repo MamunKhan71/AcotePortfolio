@@ -4,7 +4,7 @@ import EventSection from './_components/EventsSection'
 
 const Events = () => {
     return (
-        <div className='w-full h-full container mx-auto'>
+        <div className='w-full h-full container mx-auto px-4 md:px-0'>
             <HeaderSection
                 breadcrumb="Home / <span class='font-bold text-primary'>Event</span>"
                 title="Our Events"

@@ -60,7 +60,7 @@ const NavigationMenu = () => {
                                 <li><Link href={'/events'}>Events</Link></li>
                             </ul>
                             <Link href={'/book-appointment'} className="mt-4 block">
-                                <Button variant={'default'} className="w-full">Book an appointment</Button>
+                                <Button variant={'default'} size={'sm'} className="w-[80%] text-sm">Book an appointment</Button>
                             </Link>
                         </SheetContent>
                     </Sheet>
