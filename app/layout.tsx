@@ -1,9 +1,9 @@
+import Footer from "@/components/common/footer/footer";
+import InfoBar from "@/components/common/Info-bar";
+import Navbar from "@/components/common/navbar";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Roboto, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import InfoBar from "@/components/common/Info-bar";
-import Navbar from "@/components/common/navbar";
-import Footer from "@/components/common/footer/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

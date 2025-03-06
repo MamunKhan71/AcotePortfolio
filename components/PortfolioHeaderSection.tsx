@@ -1,11 +1,11 @@
-import HeaderDescription from '@/components/common/HeaderDescription'
-import HeaderTitle from '@/components/common/HeaderTitle'
-import React from 'react'
+import HeaderDescription from '@/components/common/HeaderDescription';
+import HeaderTitle from '@/components/common/HeaderTitle';
+import React from 'react';
 
 interface HeaderSectionProps {
     breadcrumb: string;
     title: string;
-    description: string;
+    description?: string;
 }
 
 const HeaderSection: React.FC<HeaderSectionProps> = ({ breadcrumb, title, description }) => {
@@ -15,7 +15,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({ breadcrumb, title, descri
                 <p dangerouslySetInnerHTML={{ __html: breadcrumb }} />
             </div>
             <HeaderTitle title={title} />
-            <HeaderDescription className='max-w-[444px] text-2xl text-center' title={description} />
+            <HeaderDescription className='max-w-[444px] text-2xl text-center' title={description || ''} />
         </div>
     )
 }
