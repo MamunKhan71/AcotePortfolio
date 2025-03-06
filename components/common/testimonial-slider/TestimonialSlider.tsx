@@ -28,7 +28,7 @@ export default function TestimonialSlider() {
         <div className="w-full">
             <div className="mt-12 grid md:grid-cols-[1fr,4fr] gap-[70px] items-center">
                 <div className="flex justify-end ">
-                    <div className="w-[260px] h-[260px] bg-gray-100 relative">
+                    <div className="w-full md:w-[260px] h-[260px] bg-gray-100 relative">
                         <Image
                             src={currentTestimonial.image || "/placeholder.svg"}
                             alt={currentTestimonial.name}

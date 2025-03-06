@@ -91,14 +91,14 @@ const ReviewCard = ({
     return (
         <figure
             className={cn(
-                "relative h-full w-[190px] cursor-pointer overflow-hidden rounded-xl py-1 px-6 shadow-sm",
+                "relative h-full w-fit md:w-[190px] cursor-pointer overflow-hidden rounded-xl py-1 px-4 md:px-6 shadow-sm",
                 // light styles
                 "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
                 // dark styles
                 "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
             )}
         >
-            <div className="flex h-16 flex-row items-center justify-center w-full gap-2">
+            <div className="flex h-8 md:h-16 flex-row items-center justify-center w-full gap-2">
                 <img  alt="" src={img} className="h-full object-contain" />
             </div>
         </figure>
@@ -107,7 +107,7 @@ const ReviewCard = ({
 
 export function CompanySlider() {
     return (
-        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden gap-12">
+        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden gap-6 md:gap-12">
             <Marquee pauseOnHover className="[--duration:20s]">
                 {firstRow.map((review, index) => (
                     <ReviewCard key={index} img={review.img} />

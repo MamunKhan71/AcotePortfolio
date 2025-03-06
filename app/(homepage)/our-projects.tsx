@@ -6,15 +6,15 @@ import { blogsData } from '@/data/blogs-data'
 
 const OurProjects = ({ isService }: { isService: boolean }) => {
     return (
-        <div className='container mx-auto h-full w-full'>
+        <div className='container mx-auto h-full w-full px-4 md:px-0'>
             <div className='flex w-full justify-between items-center'>
-                <div>
+                <div className='space-y-2 md:space-y-0'>
                     {!isService && <HeaderBadge title='our projects' />}
                     <ComponentTitle title='recent projects' />
                 </div>
-                {!isService && <Button className='text-xl' variant={'outline'}>View all</Button>}
+                {!isService && <Button className='text-base md:text-xl' variant={'outline'}>View all</Button>}
             </div>
-            <div className='grid grid-cols-3 gap-7 mt-14 w-full h-full pb-28'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7 mt-8 md:mt-14 w-full h-full pb-20 md:pb-28'>
                 {
                     blogsData?.map((blog, index) => <ProjectCards key={`blog-${index}`} title={blog.title} imageUrl={blog.imageUrl} category={blog.category} isVisible={true} id={blog.id}/>)
                 }
