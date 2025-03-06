@@ -21,9 +21,6 @@ export default {
     			grotesk: [
     				'var(--font-grotesk)'
     			],
-    			inter: [
-    				'var(--font-inter)'
-    			]
     		},
     		colors: {
     			background: 'hsl(var(--background))',
