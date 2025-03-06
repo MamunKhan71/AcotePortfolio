@@ -16,7 +16,7 @@ function ScheduleConfirmation() {
                 breadcrumb="Home / <span class='font-bold text-primary'>Schedule</span>"
                 title="Book Schedule"
             />
-            <div className="w-full max-w-xl bg-white border border-primary/50 rounded-lg shadow-md overflow-hidden p-8">
+            <div className="w-full max-w-xl bg-white border border-primary/50 rounded-lg shadow-md overflow-hidden p-2 md:p-8">
                 <div className="flex flex-col items-center pb-4">
                     <div className="relative w-20">
                         <Image
