@@ -37,7 +37,7 @@ export default function TestimonialSlider() {
                     </div>
                 </div>
                 <div>
-                    <blockquote className="text-lg md:text-[30px] md:leading-[44px]">"{currentTestimonial.quote}"</blockquote>
+                    <blockquote className="text-lg md:text-[30px] md:leading-[44px]">&apos;{currentTestimonial.quote}&apos;</blockquote>
                     <div className="mt-10 space-y-4">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
