@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image"
 import ContactForm from "./_components/ContactForm"
 import ContactInfo from "./_components/ContactInfo"
 import HeaderSection from "./_components/HeaderSection"
@@ -19,8 +20,8 @@ export default function ContactUsPage() {
                     <ContactInfo />
                 </div>
             </div>
-            <div className="h-96 w-full">
-                <img src="/acote-map.png" alt="acote map" className="h-full w-full object-cover" />
+            <div className="h-96 w-full relative">
+                <Image fill src="/acote-map.png" alt="acote map" className="h-full w-full object-cover" />
             </div>
         </div>
     )

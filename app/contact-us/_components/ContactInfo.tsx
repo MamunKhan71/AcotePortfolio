@@ -2,8 +2,8 @@ import { contactData } from '@/data/contact-info';
 
 const steps: string[] = [
     "We will contact you within 24 hours",
-    "We'll clarify your expectations, business objectives, and project requirements",
-    "We'll develop and accept a proposal",
+    "We will clarify your expectations, business objectives, and project requirements",
+    "We wll develop and accept a proposal",
     "Following that, our partnership can begin"
 ];
 
@@ -21,7 +21,7 @@ const ContactDetail: React.FC<ContactDetailProps> = ({ title, content }) => (
 const ContactInfo: React.FC = () => {
     return (
         <div className="px-4 md:px-0">
-            <h2 className="text-xl md:text-[28px] mb-4 md:mb-6 text-[#1E2228]">What we'll do next?</h2>
+            <h2 className="text-xl md:text-[28px] mb-4 md:mb-6 text-[#1E2228]">What we&apos;ll do next?</h2>
 
             <div className="space-y-6">
                 {steps.map((step, index) => (
