@@ -10,7 +10,7 @@ export default function CardBackground({ country }: { country: countryListTypes 
     >
       {
         country.id !== 0 && <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full rounded-2xl">
-          <img src={country.image} alt="" />
+          <img src={country.image} alt="card-image" />
         </div>
       }
       {
@@ -51,7 +51,7 @@ export default function CardBackground({ country }: { country: countryListTypes 
 
       <div className="absolute w-full bottom-2.5 left-1/2 -translate-x-1/2">
         <div className="flex items-center justify-center gap-2 ">
-          <img src={country.flag} className="h-4 w-4" />
+          <img src={country.flag} alt="country-image" className="h-4 w-4" />
           <h2 className="text-white text-sm font-semibold">{country.country}{" "}{country.type}</h2>
         </div>
       </div>
