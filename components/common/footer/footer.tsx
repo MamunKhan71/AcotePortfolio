@@ -1,7 +1,7 @@
 import { footerQuickLinks, footerResourcesLinks } from '@/data/footer-links'
-import FooterFirst from './components/footer-first'
-import FooterContent from './components/footer-content'
 import FollowUsContent from './components/follow-us-content'
+import FooterContent from './components/footer-content'
+import FooterFirst from './components/footer-first'
 import FooterInfoBar from './components/footer-info-bar'
 
 const Footer = () => {

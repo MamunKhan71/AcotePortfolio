@@ -1,4 +1,3 @@
-import React from 'react'
 import SocialContainer from './social-container'
 
 const FooterFirst = () => {

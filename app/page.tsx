@@ -1,11 +1,11 @@
+import ContactUsBanner from "@/components/common/contact-us-banner";
 import HeroSection from "@/components/hero-section";
-import ServicesSection from "./(homepage)/services-section";
-import OurJourney from "./(homepage)/our-journey";
-import OurProjects from "./(homepage)/our-projects";
-import OurPartners from "./(homepage)/our-partners";
 import ClientTestimonial from "./(homepage)/client-testimonial";
 import OurEvents from "./(homepage)/our-events";
-import ContactUsBanner from "@/components/common/contact-us-banner";
+import OurJourney from "./(homepage)/our-journey";
+import OurPartners from "./(homepage)/our-partners";
+import OurProjects from "./(homepage)/our-projects";
+import ServicesSection from "./(homepage)/services-section";
 
 export default function Home() {
 

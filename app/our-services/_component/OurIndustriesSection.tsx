@@ -3,9 +3,9 @@ import categoriesData, { CategoryDataTypes } from '@/data/our-industries-data'
 
 const OurIndustriesSection = () => {
     return (
-        <div>
+        <div className='px-4 md:px-0'>
             <ComponentTitle title='Our industries' />
-            <div className='grid grid-cols-3 gap-[18px] mt-10'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[18px] mt-10'>
                 {
                     categoriesData?.map((category: CategoryDataTypes) => <OurIndustriesCard key={category.id} icon={category.icon} name={category.name} />)
                 }

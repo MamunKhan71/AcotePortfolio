@@ -1,11 +1,10 @@
 "use client"
 
-import { useState } from "react"
-import Image from "next/image"
-import { ChevronLeft, ChevronRight, Star } from "lucide-react"
-import { testimonials } from "@/data/testimonial-data"
-import IconRightArrow from "@/components/icons/iconRightArrow"
 import IconLeftArrow from "@/components/icons/iconLeftArrow"
+import IconRightArrow from "@/components/icons/iconRightArrow"
+import { testimonials } from "@/data/testimonial-data"
+import Image from "next/image"
+import { useState } from "react"
 
 export default function TestimonialSlider() {
     const [currentIndex, setCurrentIndex] = useState(0)

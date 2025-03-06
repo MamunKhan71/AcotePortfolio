@@ -1,9 +1,9 @@
 "use client"
 
-import { useState, useRef } from "react"
-import { ChevronDown } from "lucide-react"
-import { faqItems } from "@/data/faq-data"
 import HeaderDescription from "@/components/common/HeaderDescription"
+import { faqItems } from "@/data/faq-data"
+import { ChevronDown } from "lucide-react"
+import { useRef, useState } from "react"
 
 export default function FAQSection() {
     const [openItems, setOpenItems] = useState<Record<string, boolean>>({})
@@ -25,7 +25,7 @@ export default function FAQSection() {
                 className="w-full text-left py-6 px-6 flex justify-between items-center focus:outline-none"
                 aria-expanded={openItems[item.id]}
             >
-                <span className="font-semibold text-lg">{item.question}</span>
+                <span className="font-semibold text-base md:text-lg">{item.question}</span>
                 <ChevronDown
                     className={`w-5 h-5 transition-transform duration-300 ease-in-out ${openItems[item.id] ? "transform rotate-180" : ""
                         }`}
@@ -49,9 +49,8 @@ export default function FAQSection() {
     )
 
     return (
-        <div>
+        <div className="px-4 md:px-0">
             <h1 className="text-3xl font-bold mb-8">FAQs</h1>
-
             <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-4">{leftColumnItems.map(renderFaqItem)}</div>
                 <div className="space-y-4">{rightColumnItems.map(renderFaqItem)}</div>

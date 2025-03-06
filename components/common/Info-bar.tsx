@@ -12,11 +12,11 @@ const InfoBar = () => {
                         <p>6th floor, DTX Business Center, Pragati Sarani Road, Dhaka 1229</p>
                     </div>
                     <div className='flex gap-10 text-sm md:text-lg'>
-                        <div className='flex items-center gap-5'>
+                        <div className='flex items-center gap-2 md:gap-5'>
                             <BsFillTelephoneFill size={16} />
                             <p>(629) 555-0129</p>
                         </div>
-                        <div className='flex items-center gap-5 text-sm md:text-lg'>
+                        <div className='flex items-center  gap-2 md:gap-5 text-sm md:text-lg'>
                             <MdEmail  size={16} />
                             <p>info@acotegroup.com</p>
                         </div>
