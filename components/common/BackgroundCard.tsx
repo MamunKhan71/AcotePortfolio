@@ -44,7 +44,7 @@ export default function CardBackground({ country }: { country: countryListTypes 
             :
             <>
               <h2 className="text-white text-xl font-bold">{country?.name}</h2>
-              <p className="text-white/80 text-sm">- {country?.role}</p>
+              <p className="text-white/80 text-xs max-w-[80%] mx-auto">- {country?.role}</p>
             </>
         }
       </div>

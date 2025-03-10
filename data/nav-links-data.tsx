@@ -1,0 +1,13 @@
+export interface NAV_LINKS_TYPES {
+    name: string;
+    href: string;
+    hasDropdown?: boolean;
+}
+export const NAV_LINKS: NAV_LINKS_TYPES[] = [
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/our-services", hasDropdown: true },
+    { name: "Portfolio", href: "/our-portfolio" },
+    { name: "About", href: "/about-us" },
+    { name: "Contact", href: "/contact-us" },
+    { name: "Events", href: "/events" }
+];
