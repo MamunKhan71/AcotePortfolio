@@ -5,16 +5,18 @@ import { EventDataTypes } from "@/data/our-event-data"
 import { Play } from "lucide-react"
 import { useState } from "react"
 
-const EventCard = ({ image, date, title, video, isVideo = false }: EventDataTypes) => {
+const EventCard = ({ image, date, title, video, isVideo = false, description }: EventDataTypes) => {
     const [isOpen, setIsOpen] = useState(false)
     return (
         <div className="space-y-4">
             {isVideo ? (
                 <Dialog open={isOpen} onOpenChange={setIsOpen}>
                     <DialogTrigger asChild>
-                        <div className="w-full h-[270.98px] relative group cursor-pointer">
-                            <img className="w-full h-full object-cover" src={image || "/placeholder.svg"} alt={title} />
-                            <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div className="w-full h-[270.98px] relative group cursor-pointer overflow-hidden">
+                            <img className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-50" 
+                                src={image || "/placeholder.svg"} alt={title} 
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                                 <div className="bg-primary/80 rounded-full p-3 transform transition-transform group-hover:scale-110">
                                     <Play className="w-8 h-8 text-white" fill="white" />
                                 </div>
@@ -31,8 +33,13 @@ const EventCard = ({ image, date, title, video, isVideo = false }: EventDataType
                     </DialogContent>
                 </Dialog>
             ) : (
-                <div className="w-full h-[270.98px]">
-                    <img className="w-full h-full object-cover" src={image || "/placeholder.svg"} alt={title} />
+                <div className="w-full h-[270.98px] relative group overflow-hidden">
+                    <img className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-50" 
+                        src={image || "/placeholder.svg"} alt={title} 
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <p className="text-white text-base p-6 text-center">{description}</p>
+                    </div>
                 </div>
             )}
             <div className="flex items-center gap-6 text-base text-secondary">
@@ -45,4 +52,3 @@ const EventCard = ({ image, date, title, video, isVideo = false }: EventDataType
 }
 
 export default EventCard
-

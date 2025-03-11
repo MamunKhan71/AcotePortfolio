@@ -5,6 +5,7 @@ export interface EventDataTypes {
     category?: string;
     video?: string;
     isVideo?: boolean;
+    description?: string;
 };
 
 export const eventsData: EventDataTypes[] = [
@@ -14,7 +15,8 @@ export const eventsData: EventDataTypes[] = [
         title: "New Year",
         category: "Events",
         video: "/events/event1.mp4",
-        isVideo: true
+        isVideo: true,
+        description: 'Acote Group celebrated the new year with employees and team members, fostering a positive and festive work environment.'
     },
     {
         image: "/events/event2.png",
@@ -22,7 +24,8 @@ export const eventsData: EventDataTypes[] = [
         title: "Reward Program",
         category: "Awards",
         video: "/videos/event2.mp4",
-        isVideo: true
+        isVideo: true,
+        description: 'A recognition event to appreciate outstanding employees for their contributions and achievements.'
     },
     {
         image: "/events/event3.png",
@@ -30,7 +33,8 @@ export const eventsData: EventDataTypes[] = [
         title: "Tintolab",
         category: "Conferences",
         video: "/videos/event3.mp4",
-        isVideo: false
+        isVideo: false,
+        description: 'Welcomed Joonyum Choi, CEO of Tintolab, to discuss potential collaborations and future projects.'
     },
     {
         image: "/events/event4.png",
@@ -38,7 +42,8 @@ export const eventsData: EventDataTypes[] = [
         title: "Grepp MoU",
         category: "Office",
         video: "/videos/event4.mp4",
-        isVideo: false
+        isVideo: false,
+        description: 'Signed of a Memorandum of Understanding (MoU) between Acote Group and Grepp to drive technological innovation.'
     },
     {
         image: "/events/event5.png",
@@ -46,7 +51,8 @@ export const eventsData: EventDataTypes[] = [
         title: "Collaborative future projects",
         category: "Fun activity",
         video: "/videos/event5.mp4",
-        isVideo: false
+        isVideo: false,
+        description: 'Announcement of collaboration with BIDA and BEZA to promote digital and infrastructural development.'
     },
     {
         image: "/events/event6.png",
@@ -54,6 +60,7 @@ export const eventsData: EventDataTypes[] = [
         title: "UNDP Bangladesh",
         category: "Events",
         video: "/videos/event6.mp4",
-        isVideo: true
+        isVideo: true,
+        description: 'Met with UNDP Bangladesh representatives to explore partnership opportunities for sustainable development projects.'
     }
 ];

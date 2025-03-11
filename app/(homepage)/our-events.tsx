@@ -17,7 +17,7 @@ const OurEvents = () => {
             <div className='mt-10 md:mt-[60px]'>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full'>
                     {
-                        eventsData?.map((event, index) => <EventCard key={`event${index}`} image={event.image} date={event.date} title={event.title} />)
+                        eventsData?.map((event, index) => <EventCard key={`event${index}`} image={event.image} date={event.date} title={event.title} description={event.description} />)
                     }
                 </div>
             </div>
