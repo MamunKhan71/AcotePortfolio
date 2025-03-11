@@ -13,7 +13,7 @@ export default function OurJourneyTimeline() {
                 {timelineData.map(({ year, position, text }) => (
                     <div key={year} className="col-span-1 flex flex-row md:flex-col gap-4 md:gap-0 items-center">
                         <div className={position === "top" ? "order-1" : "order-2 md:mt-24"}>
-                            <div className="w-24 md:w-[153px] h-24 md:h-[153px] rounded-full bg-[#1e3a5f] flex items-center justify-center text-white font-bold text-lg md:text-xl">
+                            <div className="w-24 md:w-[153px] h-24 md:h-[153px] rounded-full bg-[#1e3a5f] hover:bg-primary flex items-center justify-center text-white font-bold text-lg md:text-xl transition-colors duration-1000">
                                 {year}
                             </div>
                         </div>
