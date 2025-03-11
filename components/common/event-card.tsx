@@ -34,11 +34,11 @@ const EventCard = ({ image, date, title, video, isVideo = false, description }: 
                 </Dialog>
             ) : (
                 <div className="w-full h-[270.98px] relative group overflow-hidden">
-                    <img className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-50" 
+                    <img className="w-full h-full object-cover transition-all duration-300" 
                         src={image || "/placeholder.svg"} alt={title} 
                     />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <p className="text-white text-base p-6 text-center">{description}</p>
+                    <div className="absolute bottom-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p className="text-white text-base p-2 text-center bg-black/80 transition-transform transform group-hover:translate-y-0 translate-y-4">{description}</p>
                     </div>
                 </div>
             )}
