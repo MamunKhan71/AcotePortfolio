@@ -54,7 +54,7 @@ export default function ServicesSection() {
 
                     {/* Active Service Content */}
                     <div className="relative overflow-hidden shadow-[0_0px_10px_rgba(0,0,0,0.05)] rounded-2xl p-[24px] md:p-[44px]">
-                        <div className="flex flex-col md:flex-row gap-10 md:gap-14 justify-between h-full w-full items-start">
+                        <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-14 justify-between h-full w-full items-start">
                             <div className="flex-1 space-y-6 flex flex-col justify-between h-full w-auto">
                                 <span className="inline-flex px-4 py-1.5 bg-primary/10 backdrop-blur-sm border border-primary/80 w-fit rounded-lg text-base font-semibold text-primary">
                                     {services[activeService].tag}
@@ -69,7 +69,7 @@ export default function ServicesSection() {
                             </div>
 
                             <div className="flex-1 h-full relative">
-                                <div className="h-full absolute -right-12">
+                                <div className="h-full md:absolute -right-12">
                                     <img src={services[activeService].image} alt={services[activeService].title} className="h-full" />
                                 </div>
                             </div>
