@@ -10,17 +10,10 @@ import Pagination from "./Pagination";
 const tabs = [
     "All",
     "Graphics Design",
-    "Apps Development",
+    "Development",
     "UX/UI Design",
-    "Finance",
-    "Marketing",
     "SaaS & Dashboard",
-    "FinTech",
     "AI/ML",
-    "Business",
-    "SEO",
-    "Web Development",
-    "Mobile App",
 ];
 
 export default function PortfolioMainSection() {
