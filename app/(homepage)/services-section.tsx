@@ -70,7 +70,7 @@ export default function ServicesSection() {
 
                             <div className="flex-1 h-full relative">
                                 <div className="h-full absolute -right-12">
-                                    <img src="/ai.png" alt="" className="h-full" />
+                                    <img src={services[activeService].image} alt={services[activeService].title} className="h-full" />
                                 </div>
                             </div>
                         </div>

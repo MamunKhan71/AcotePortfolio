@@ -14,7 +14,6 @@ import iconUiDesign from "@/components/icons/iconUiDesign";
 import iconVideoMarketing from "@/components/icons/iconVideoMarketing";
 import iconVision from "@/components/icons/iconVision";
 import iconWebDev from "@/components/icons/iconWebDev";
-import { AppWindow, Brain, Building2, Code2, Database, FileCode2, Laptop2, LayoutGrid, MessageSquare, MousePointerClick, PenTool, Search, Share2, Smartphone, Video } from "lucide-react";
 
 export const services = {
   it: {
