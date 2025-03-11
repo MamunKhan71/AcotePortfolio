@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AiIcon = () => {
+const AiIcon = ({ isHovered = true }: { isHovered: boolean }) => {
     return (
         <svg
             width={90}
@@ -22,12 +22,12 @@ const AiIcon = () => {
                             width={53}
                             height={58}
                         >
-                            <path d="M52.7 8H0.699951V66H52.7V8Z" fill="white" />
+                            <path d="M52.7 8H0.699951V66H52.7V8Z" fill={isHovered ? "#21B24B" : "white"} />
                         </mask>
                         <g mask="url(#mask0_2057_5111)">
                             <path
                                 d="M49.7 10H3.69995C3.14767 10 2.69995 10.4477 2.69995 11V67C2.69995 67.5523 3.14767 68 3.69995 68H49.7C50.2522 68 50.7 67.5523 50.7 67V11C50.7 10.4477 50.2522 10 49.7 10Z"
-                                stroke="white"
+                                stroke={isHovered ? "#21B24B" : "white"}
                                 strokeWidth={2}
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
@@ -58,7 +58,7 @@ const AiIcon = () => {
                     <rect
                         width={52}
                         height={58}
-                        fill="white"
+                        fill={isHovered ? "#21B24B" : "white"}
                         transform="translate(0.699951 8)"
                     />
                 </clipPath>
@@ -66,7 +66,7 @@ const AiIcon = () => {
                     <rect
                         width={52}
                         height={58}
-                        fill="white"
+                        fill={isHovered ? "#21B24B" : "white"}
                         transform="translate(0.699951 8)"
                     />
                 </clipPath>
@@ -74,7 +74,7 @@ const AiIcon = () => {
                     <rect
                         width={52}
                         height={58}
-                        fill="white"
+                        fill={isHovered ? "#21B24B" : "white"}
                         transform="translate(0.699951 8)"
                     />
                 </clipPath>

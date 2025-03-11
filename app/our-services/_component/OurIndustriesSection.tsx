@@ -1,5 +1,7 @@
+'use client'
 import ComponentTitle from '@/components/common/ComponentTitle'
 import categoriesData, { CategoryDataTypes } from '@/data/our-industries-data'
+import { useState } from 'react'
 
 const OurIndustriesSection = () => {
     return (
@@ -17,12 +19,13 @@ const OurIndustriesSection = () => {
 export default OurIndustriesSection
 
 
-const OurIndustriesCard = ({ icon, name }: CategoryDataTypes) => {
+const OurIndustriesCard = ({ icon: Icon, name }: CategoryDataTypes) => {
+    const [isHovered, setIsHovered] = useState(false)
     return (
-        <div className='relative bg-[#E2E2E2]/50 px-4 py-6 rounded-sm'>
-            <p className='text-xl font-medium'>{name}</p>
-            <div className='absolute right-16 bottom-0'>
-                {icon}
+        <div onMouseOver={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className='relative bg-[#E2E2E2]/50 px-4 py-6 rounded-sm '>
+            <p className={`text-xl font-medium transition-all ease-in-out duration-300 ${isHovered ? 'text-primary': 'text-secondary'}`}>{name}</p>
+            <div className={`absolute right-16 bottom-0 transition-all ease-in-out duration-500`}>
+                <Icon isHovered={isHovered} />
             </div>
         </div>
     )

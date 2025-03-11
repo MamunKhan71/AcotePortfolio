@@ -54,7 +54,7 @@ export default function TechStack() {
                                         alt={tech.name}
                                         width={158}
                                         height={49}
-                                        className="object-contain w-fit md:w-[158px] h-[49px]"
+                                        className="object-contain w-fit md:w-[128px] h-[40px]"
                                     />
                                 </div>
                             ))}

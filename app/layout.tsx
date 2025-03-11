@@ -4,6 +4,7 @@ import Navbar from "@/components/common/navbar";
 import type { Metadata } from "next";
 import { Roboto, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import ScrollToTopIcon from "@/components/common/ScrollToTopIcon";
 
 const roboto = Roboto({
   variable: '--font-roboto',
@@ -29,14 +30,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased ${roboto.variable} ${grotesk.variable} font-roboto`}
+        className={`antialiased ${roboto.variable} ${grotesk.variable} font-roboto relative`}
       >
         <InfoBar />
         <Navbar />
         <div className="min-h-screen h-full w-full">
           {children}
+          <div className="absolute bottom-28 right-12 z-50">
+            <ScrollToTopIcon />
+          </div>
         </div>
         <Footer />
+
       </body>
     </html>
   );
