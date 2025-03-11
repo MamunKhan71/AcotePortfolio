@@ -55,7 +55,7 @@ export const countryList: countryListTypes[] = [
         type: "",
         year: 2024,
         name: "Jordan Ng",
-        role: "- Country Head (Singapore)",
+        role: "Country Head (Singapore)",
         operation_status: true,
         image: "/nig-profile.png",
         flag: '/sg-flag.png'
