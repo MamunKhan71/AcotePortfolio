@@ -52,6 +52,9 @@ const reviews = [
         img: "/grepp-logo.png",
     },
     {
+        img: "/go-pizza-logo.png",
+    },
+    {
         img: "/ex-logo.png",
     },
     {

@@ -4,11 +4,18 @@ import ComponentTitle from "@/components/common/ComponentTitle"
 import HeaderBadge from "@/components/common/HeaderBadge"
 import { Button } from "@/components/ui/button"
 import { countryList } from "@/data/country-list"
-import { useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import { useEffect, useState } from "react"
 
 const OurJourney = () => {
   const [activeCountry, setActiveCountry] = useState(0)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveCountry((prevCountry) => (prevCountry + 1) % countryList.length)
+    }, 2500)
 
+    return () => clearInterval(interval)
+  }, [])
   return (
     <div className="min-h-[601px] w-full bg-[#111827] py-10 md:py-0">
       {/* Desktop Layout - Hidden on mobile */}
@@ -38,9 +45,21 @@ const OurJourney = () => {
               <div className="flex gap-4 items-center">
                 <div className="bg-red-500 h-3 w-3 rounded-full animate-heartbeat border border-[#00000]/10"></div>
                 <div className="w-[223px] h-[315.422px]">
-                  {activeCountry === 0 && (
-                    <CardBackground country={countryList?.find((country) => country.id === activeCountry)!} />
-                  )}
+                  <AnimatePresence mode="wait">
+                    {activeCountry === 0 && (
+                      <motion.div
+                        key="country-0"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.4 }}
+                      >
+                        <CardBackground
+                          country={countryList?.find((country) => country.id === activeCountry)!}
+                        />
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               </div>
             </div>
@@ -48,9 +67,21 @@ const OurJourney = () => {
             <div className="absolute -top-[32px] right-[296px]">
               <div className="flex gap-4 items-center">
                 <div className="w-[223px] h-[315.422px]">
-                  {activeCountry === 1 && (
-                    <CardBackground country={countryList?.find((country) => country.id === activeCountry)!} />
-                  )}
+                  <AnimatePresence mode="wait">
+                    {activeCountry === 1 && (
+                      <motion.div
+                        key="country-0"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.4 }}
+                      >
+                        <CardBackground
+                          country={countryList?.find((country) => country.id === activeCountry)!}
+                        />
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
                 <div className="bg-[#117fd9] h-3 w-3 rounded-full animate-heartbeat border border-[#00000]/10"></div>
               </div>
@@ -58,9 +89,21 @@ const OurJourney = () => {
             <div className="absolute top-0 right-[180px]">
               <div className="flex gap-4 items-center">
                 <div className="w-[223px] h-[315.422px]">
-                  {activeCountry === 2 && (
-                    <CardBackground country={countryList?.find((country) => country.id === activeCountry)!} />
-                  )}
+                  <AnimatePresence mode="wait">
+                    {activeCountry === 2 && (
+                      <motion.div
+                        key="country-0"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.4 }}
+                      >
+                        <CardBackground
+                          country={countryList?.find((country) => country.id === activeCountry)!}
+                        />
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
                 <div className="bg-[#117fd9] h-3 w-3 rounded-full animate-heartbeat border border-[#00000]/10"></div>
               </div>
@@ -68,9 +111,21 @@ const OurJourney = () => {
             <div className="absolute top-[55px] right-[195px]">
               <div className="flex gap-4 items-center">
                 <div className="w-[223px] h-[315.422px]">
-                  {activeCountry === 3 && (
-                    <CardBackground country={countryList?.find((country) => country.id === activeCountry)!} />
-                  )}
+                  <AnimatePresence mode="wait">
+                    {activeCountry === 3 && (
+                      <motion.div
+                        key="country-0"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.4 }}
+                      >
+                        <CardBackground
+                          country={countryList?.find((country) => country.id === activeCountry)!}
+                        />
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
                 <div className="bg-[#11d9c8] h-3 w-3 rounded-full animate-heartbeat border border-[#00000]/10"></div>
               </div>
@@ -78,9 +133,21 @@ const OurJourney = () => {
             <div className="absolute top-[48px] right-[105px]">
               <div className="flex gap-4 items-center">
                 <div className="w-[223px] h-[315.422px]">
-                  {activeCountry === 4 && (
-                    <CardBackground country={countryList?.find((country) => country.id === activeCountry)!} />
-                  )}
+                  <AnimatePresence mode="wait">
+                    {activeCountry === 4 && (
+                      <motion.div
+                        key="country-0"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.4 }}
+                      >
+                        <CardBackground
+                          country={countryList?.find((country) => country.id === activeCountry)!}
+                        />
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
                 <div className="bg-[#eb7600] h-3 w-3 rounded-full animate-heartbeat border border-[#00000]/10"></div>
               </div>
