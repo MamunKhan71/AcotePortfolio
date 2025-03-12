@@ -2,10 +2,11 @@
 import ComponentTitle from '@/components/common/ComponentTitle'
 import HeaderBadge from '@/components/common/HeaderBadge'
 import { Button } from '@/components/ui/button'
-import { founderInfo } from '@/data/our-team'
+import { founderInfo, teamInfo } from '@/data/our-team'
 import { useState } from 'react'
 import FounderSection from './team-founder/FounderSection'
 import SisterConcernSection from './team-founder/SisterConcernSection'
+import TeamMembers from './team-founder/TeamMembers'
 
 const buttons = [
     { id: 'founder', label: 'Founders & Leaders' },
@@ -26,7 +27,7 @@ const OurTeam = () => {
                         <Button
                             key={id}
                             onClick={() => setActiveButton(id)}
-                            className={`rounded-md text-base md:text-xl font-bold md:leading-[29.905px] hover:bg-[#82c8ee33] 
+                            className={`rounded-md text-sm md:text-xl font-bold md:leading-[29.905px] hover:bg-[#82c8ee33] 
                                 ${activeButton === id ? 'bg-[#82c8ee33] text-[#76BE42]' : 'bg-[#1C2B40] text-[#BABABA]'}`}
                         >
                             {label}
@@ -36,6 +37,9 @@ const OurTeam = () => {
                 <div>
                     {
                         activeButton === 'founder' && <FounderSection founders={founderInfo} />
+                    }
+                    {
+                        activeButton === 'team' && <TeamMembers teams={teamInfo} />
                     }
                     <SisterConcernSection />
                 </div>

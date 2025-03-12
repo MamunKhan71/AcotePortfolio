@@ -27,3 +27,46 @@ export const founderInfo: Founder[] = [
         ]
     }
 ]
+export interface teamInfoTypes {
+    name: string,
+    role: string,
+    imageSrc: string,
+}
+
+export const teamInfo: teamInfoTypes[] = [
+    {
+        "name": "Hasan Mahmudul",
+        "role": "Vice President",
+        "imageSrc": "/about-us/hasan-profile.png"
+    },
+    {
+        "name": "Arman Ahmed Nabil",
+        "role": "Chief Business Officer",
+        "imageSrc": "/about-us/nabil-profile.png"
+    },
+    {
+        "name": "Mamun Or Rashid",
+        "role": "Chief Technical Officer",
+        "imageSrc": "/about-us/mamun-profile.png"
+    },
+    {
+        "name": "Toha Hossain",
+        "role": "Head of Project & Development",
+        "imageSrc": "/about-us/toha-profile.png"
+    },
+    {
+        "name": "Kim Kwang Sik (Kevin)",
+        "role": "IT Project Development and Advisor, Chief of Acote Korea",
+        "imageSrc": "/about-us/korea-profile.png"
+    },
+    {
+        "name": "Jordan Ng",
+        "role": "Country Head (Singapore)",
+        "imageSrc": "/about-us/singapore-profile.png"
+    },
+    {
+        "name": "USA",
+        "role": "Coming soon",
+        "imageSrc": "/about-us/usa-profile.png"
+    }
+]
