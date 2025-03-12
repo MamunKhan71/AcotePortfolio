@@ -6,7 +6,9 @@ import OurJourney from "./(homepage)/our-journey";
 import OurPartners from "./(homepage)/our-partners";
 import OurProjects from "./(homepage)/our-projects";
 import ServicesSection from "./(homepage)/services-section";
+
 export default function Home() {
+
   return (
     <>
       <HeroSection />
