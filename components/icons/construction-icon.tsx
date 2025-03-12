@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ConstructionIcon = () => {
+const ConstructionIcon = ({ isHovered = true }: { isHovered: boolean }) => {
     return (
         <svg
             width={107}
@@ -14,14 +14,14 @@ const ConstructionIcon = () => {
                 width={36}
                 height={18}
                 transform="translate(0.629883)"
-                fill="url(#pattern0_2057_5112)"
+                fill={isHovered ? '#21B24B' : "url(#pattern0_2057_5112)"}
             />
             <g clipPath="url(#clip0_2057_5112)">
                 <g clipPath="url(#clip1_2057_5112)">
-                    <path d="M23.3101 26L39.3101 36V66H23.3101V26Z" fill="#E2E2E2" />
+                    <path d="M23.3101 26L39.3101 36V66H23.3101V26Z" fill={isHovered ? '#21B24B' : "#E2E2E2"} />
                     <path
                         d="M7.31006 66V36.75L23.3101 27V66"
-                        stroke="white"
+                        stroke={isHovered ? "#21B24B" : "white"}
                         strokeWidth={2}
                         strokeLinejoin="round"
                     />
@@ -32,7 +32,7 @@ const ConstructionIcon = () => {
                     <path d="M79.8 10L105.8 26V74H79.8V10Z" fill="#E2E2E2" />
                     <path
                         d="M53.8 74V26.75L79.8 11V74"
-                        stroke="white"
+                        stroke={isHovered ? "#21B24B" : "white"}
                         strokeWidth={2}
                         strokeLinejoin="round"
                     />
@@ -54,7 +54,7 @@ const ConstructionIcon = () => {
                     <rect
                         width={35}
                         height={41}
-                        fill="white"
+                        fill={isHovered ? "#21B24B" : "white"}
                         transform="translate(5.31006 25)"
                     />
                 </clipPath>
@@ -62,15 +62,15 @@ const ConstructionIcon = () => {
                     <rect
                         width={35}
                         height={41}
-                        fill="white"
+                        fill={isHovered ? "#21B24B" : "white"}
                         transform="translate(5.31006 25)"
                     />
                 </clipPath>
                 <clipPath id="clip2_2057_5112">
-                    <rect width={55} height={65} fill="white" transform="translate(51.8 9)" />
+                    <rect width={55} height={65} fill={isHovered ? "#21B24B" : "white"} transform="translate(51.8 9)" />
                 </clipPath>
                 <clipPath id="clip3_2057_5112">
-                    <rect width={55} height={65} fill="white" transform="translate(51.8 9)" />
+                    <rect width={55} height={65} fill={isHovered ? "#21B24B" : "white"} transform="translate(51.8 9)" />
                 </clipPath>
                 <image
                     id="image0_2057_5112"

@@ -40,7 +40,7 @@ const AiIcon = ({ isHovered = true }: { isHovered: boolean }) => {
                 width={72}
                 height={64}
                 transform="translate(17.79 0.390137)"
-                fill="url(#pattern0_2057_5111)"
+                fill={isHovered ? '#21B24B' : "url(#pattern0_2057_5111)"}
             />
             <defs>
                 <pattern
