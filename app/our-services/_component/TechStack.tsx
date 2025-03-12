@@ -46,7 +46,7 @@ export default function TechStack() {
                     </div>
 
                     {expandedCategories[category.id] && (
-                        <div className="py-6 px-4 pl-20 flex flex-wrap gap-8 items-center bg-[#F8F8F8]">
+                        <div className="py-6 px-4 pl-20 flex flex-wrap gap-4 md:gap-8 items-center bg-[#F8F8F8]">
                             {category.technologies.map((tech, index) => (
                                 <div key={index} className="flex flex-col items-center justify-center gap-2 rounded-xl shadow-xl px-10 py-2">
                                     <Image
