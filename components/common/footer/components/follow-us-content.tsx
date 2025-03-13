@@ -22,11 +22,11 @@ const FollowUsContent = () => {
                     </li>
                     <li className={listStyle}>
                         <MobileIcon />
-                        <p>+880 1758 388865</p>
+                        <p><a href="tel:+8801758388865">+880 1758 388865</a></p>
                     </li>
                     <li className={listStyle}>
                         <EmailIcon />
-                        <p>info@acotegroup.com</p>
+                        <p><a href="mailto:info@acotegroup.com">info@acotegroup.com</a></p>
                     </li>
                 </ul>
             </div>

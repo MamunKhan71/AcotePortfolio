@@ -3,6 +3,7 @@ import EventCard from '@/components/common/event-card'
 import HeaderBadge from '@/components/common/HeaderBadge'
 import { Button } from '@/components/ui/button'
 import { eventsData } from '@/data/our-event-data'
+import Link from 'next/link'
 
 const OurEvents = () => {
     return (
@@ -12,7 +13,9 @@ const OurEvents = () => {
                     <HeaderBadge title='media' />
                     <ComponentTitle title='Our Events' />
                 </div>
-                <Button variant={'outline'} className='text-base md:text-xl'>View all</Button>
+                <Link href={'/events'}>
+                    <Button variant={'outline'} className='text-base md:text-xl'>View all</Button>
+                </Link>
             </div>
             <div className='mt-10 md:mt-[60px]'>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full'>
