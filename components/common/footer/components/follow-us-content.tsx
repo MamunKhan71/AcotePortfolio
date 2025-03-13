@@ -26,7 +26,7 @@ const FollowUsContent = () => {
                     </li>
                     <li className={listStyle}>
                         <EmailIcon />
-                        <p>hr@acotegroup.com</p>
+                        <p>info@acotegroup.com</p>
                     </li>
                 </ul>
             </div>

@@ -1,14 +1,14 @@
 import ComponentTitle from '@/components/common/ComponentTitle'
 import HeaderBadge from '@/components/common/HeaderBadge'
 import HeaderDescription from '@/components/common/HeaderDescription'
-import Image from 'next/image'
 
 const AboutAcote = () => {
     return (
         <div className='container mx-auto px-4 md:px-0'>
             <div className='flex flex-col md:flex-row gap-6 md:gap-14 w-full items-center justify-between'>
                 <div className='relative basis-2/5 h-[450px] w-full rounded-[30px] overflow-hidden '>
-                    <Image fill src={`/about-us/about-acote.png`} alt='about acote' className='object-cover h-full w-full' />
+                    {/* <Image fill src={`/about-us/about-acote.png`} alt='about acote' className='object-cover h-full w-full' /> */}
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-xtlcQzurf0?si=PdkLi4SUOuRYWSLT" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 </div>
                 <div className='flex-1 w-full'>
                     <div className='space-y-3 md:space-y-4 mb-4 md:mb-7'>
