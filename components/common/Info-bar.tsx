@@ -4,7 +4,7 @@ import { MdEmail } from 'react-icons/md'
 
 const InfoBar = () => {
     return (
-        <div className='bg-[#f3f6f3] w-full py-3 font-roboto text-lg'>
+        <div className='bg-primary text-white w-full py-3 font-roboto text-lg'>
             <div className='container mx-auto px-4'>
                 <div className='flex items-center justify-between'>
                     <div className='hidden md:flex items-center gap-2'>
