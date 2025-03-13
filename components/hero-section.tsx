@@ -34,9 +34,15 @@ export default function HeroSection() {
                             {heroSlides[currentSlide].title}
                         </h1>
                         <p className="text-[#6B7280] md:text-lg">{heroSlides[currentSlide].description}</p>
-                        <Button variant={'default'}>
-                            {heroSlides[currentSlide].buttonText}
-                        </Button>
+                        {
+                            heroSlides[currentSlide].id === 1 ? <a href="Acote Group - Company Deck 2024 EN .pdf" download={true}>
+                                <Button variant={'default'} className="mt-6">
+                                    {heroSlides[currentSlide].buttonText}
+                                </Button>
+                            </a> : <Button variant={'default'}>
+                                {heroSlides[currentSlide].buttonText}
+                            </Button>
+                        }
                     </div>
 
                     {/* Image (Right) */}
