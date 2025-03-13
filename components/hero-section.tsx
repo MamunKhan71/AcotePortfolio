@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { heroSlides } from "@/data/hero-slide-data"
+import Link from "next/link"
 
 
 
@@ -39,9 +40,11 @@ export default function HeroSection() {
                                 <Button variant={'default'} className="mt-6">
                                     {heroSlides[currentSlide].buttonText}
                                 </Button>
-                            </a> : <Button variant={'default'}>
-                                {heroSlides[currentSlide].buttonText}
-                            </Button>
+                            </a> : <Link href={heroSlides[currentSlide].buttonLink}>
+                                <Button variant={'default'} className="mt-6">
+                                    {heroSlides[currentSlide].buttonText}
+                                </Button>
+                            </Link>
                         }
                     </div>
 

@@ -32,7 +32,7 @@ export const heroSlides: heroSlidesDataTypes[] = [
         description:
             "Stay ahead of the competition with our strategic technology consulting services. We help you navigate the digital landscape and implement solutions that position your business for future growth.",
         buttonText: "Get Started",
-        buttonLink: "#",
+        buttonLink: "/all-services",
         image: "/heroNav2.jpg",
     },
 ]
