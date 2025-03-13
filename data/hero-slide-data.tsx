@@ -24,7 +24,7 @@ export const heroSlides: heroSlidesDataTypes[] = [
             "We use Artificial Intelligence and Machine Learning to help businesses work faster, make better decisions, and grow. Our smart solutions make tasks easier and improve results.",
         buttonText: "Our Services",
         buttonLink: "#",
-        image: "/heroNav2.jpg",
+        image: "/heroNav3.jpg",
     },
     {
         id: 3,
@@ -33,6 +33,6 @@ export const heroSlides: heroSlidesDataTypes[] = [
             "Stay ahead of the competition with our strategic technology consulting services. We help you navigate the digital landscape and implement solutions that position your business for future growth.",
         buttonText: "Get Started",
         buttonLink: "#",
-        image: "/heroNav3.jpg",
+        image: "/heroNav2.jpg",
     },
 ]
