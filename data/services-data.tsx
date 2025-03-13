@@ -4,7 +4,7 @@ import { Code, Database, Layers, LayoutGrid, Lightbulb, Megaphone, MonitorSmartp
 export const servicesData = [
     {
         id: "it-solutions",
-        title: "IT Solutions",
+        title: "Developments",
         icon: <Server className="h-5 w-5" />,
         description: "Comprehensive technology solutions for modern businesses",
         services: [
