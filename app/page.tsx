@@ -6,12 +6,14 @@ import OurJourney from "./(homepage)/our-journey";
 import OurPartners from "./(homepage)/our-partners";
 import OurProjects from "./(homepage)/our-projects";
 import ServicesSection from "./(homepage)/services-section";
+import HeroSlider from "@/components/HeroSlider";
 
 export default function Home() {
 
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection /> */}
+      <HeroSlider />
       <div className="space-y-20 md:space-y-28">
         <ServicesSection />
         <OurJourney />

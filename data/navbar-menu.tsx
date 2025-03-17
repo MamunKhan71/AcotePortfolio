@@ -17,7 +17,7 @@ import iconWebDev from "@/components/icons/iconWebDev";
 
 export const services = {
   it: {
-    title: "IT Solution",
+    title: "Developments",
     items: [
       {
         title: "Mobile App Development",

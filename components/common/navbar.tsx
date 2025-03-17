@@ -17,7 +17,7 @@ const NavigationMenu = () => {
     const pathname = usePathname();
     const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
     return (
-        <div className="w-full shadow-sm py-2">
+        <div className="w-full shadow-sm py-2 sticky top-0 bg-white z-50">
             <div className="relative flex items-center justify-between container mx-auto w-full font-roboto px-4 md:px-0">
                 <Link href={'/'}>
                     <Image src={'/acote-logo.png'} alt="acote group logo" width={118} height={67} />
