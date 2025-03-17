@@ -99,7 +99,7 @@ export default function HeroSlider() {
 
   return (
     <section
-      className="relative w-full h-screen max-h-[800px] overflow-hidden"
+      className="relative w-full h-[80vh] md:h-screen max-h-[800px] overflow-hidden"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
@@ -167,7 +167,7 @@ export default function HeroSlider() {
                     >
                       <Link
                         href="#"
-                        className="group inline-flex items-center gap-2 bg-white text-gray-900 hover:bg-green-500 hover:text-white px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-green-500/20 hover:shadow-xl"
+                        className="group inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-green-500/20 hover:shadow-xl"
                       >
                         {service.cta}
                         <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
