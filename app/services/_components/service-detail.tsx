@@ -68,10 +68,14 @@ export default function ServiceDetail({ service, className }: ServiceDetailProps
                             <h1 className="text-4xl font-bold text-white mb-6">{service.title}</h1>
                             <p className="text-xl text-white/90 mb-8">{service.subtitle}</p>
                             <div className="flex gap-4 items-center">
-                                <Button size="lg" className="bg-primary text-white hover:bg-secondary inline-flex gap-2 items-center">
-                                    <Phone /> Call Now
-                                </Button>
-                                <ShimmerButton title="Request a Consultation" className="text-white" />
+                                <Link href={'tel:+8801758388865'}>
+                                    <Button size="lg" className="bg-primary text-white hover:bg-secondary inline-flex gap-2 items-center">
+                                        <Phone /> Call Now
+                                    </Button>
+                                </Link>
+                                <Link href={'/book-appointment'}>
+                                    <ShimmerButton title="Request a Consultation" className="text-white" />
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -187,7 +191,9 @@ export default function ServiceDetail({ service, className }: ServiceDetailProps
                                         Ready to discuss your {service.title.toLowerCase()} project? Get in touch with our team for a free
                                         consultation.
                                     </p>
-                                    <Button className="w-full bg-emerald-600 hover:bg-emerald-700">Request a Consultation</Button>
+                                    <Link href={'/book-appoinment'}>
+                                        <Button className="w-full bg-primary hover:bg-green-700">Request a Consultation</Button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

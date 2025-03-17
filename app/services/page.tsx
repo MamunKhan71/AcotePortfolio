@@ -39,13 +39,12 @@ export default function ServicesPage() {
         <div className="container mx-auto">
           <Tabs defaultValue="all" className="w-full">
             <div className="flex justify-center mb-8">
-              <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
+              <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
                 <TabsTrigger value="all">All Services</TabsTrigger>
                 <TabsTrigger value="development">Development</TabsTrigger>
                 <TabsTrigger value="ai-ml">AI/ML Solutions</TabsTrigger>
                 <TabsTrigger value="bpo">BPO</TabsTrigger>
                 <TabsTrigger value="marketing">Digital Marketing</TabsTrigger>
-                <TabsTrigger value="glass">Glass Studio</TabsTrigger>
               </TabsList>
             </div>
 
@@ -67,10 +66,6 @@ export default function ServicesPage() {
 
             <TabsContent value="marketing" className="mt-0">
               <ServicesGrid services={marketingServices} />
-            </TabsContent>
-
-            <TabsContent value="glass" className="mt-0">
-              <ServicesGrid services={glassServices} />
             </TabsContent>
           </Tabs>
         </div>
