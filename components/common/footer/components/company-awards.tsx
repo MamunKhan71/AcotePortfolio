@@ -5,7 +5,7 @@ import SocialContainer from './social-container'
 const CompanyAwards = () => {
     return (
         <div className='relative w-full py-4 border-t border-t-[#232751]'>
-            <div className='container mx-auto flex w-full items-center justify-between'>
+            <div className='container mx-auto flex flex-wrap md:flex-nowrap w-full items-center justify-between'>
                 <SocialContainer />
                 <div className='flex  items-center justify-end gap-4 w-full'>
                     <div className='flex gap-4 items-center'>

@@ -48,7 +48,7 @@ export default function ServicesPage() {
               </TabsList>
             </div>
 
-            <TabsContent value="all" className="mt-0">
+            <TabsContent value="all" className="mt-">
               <ServicesGrid services={servicesData} />
             </TabsContent>
 
