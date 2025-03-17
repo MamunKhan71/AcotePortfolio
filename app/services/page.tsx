@@ -36,7 +36,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="py-16">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4 md:px-0">
           <Tabs defaultValue="all" className="w-full">
             <div className="flex justify-center mb-8">
               <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
