@@ -1,14 +1,14 @@
 import ShimmerButton from "@/components/shimmer-button"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { ArrowLeft, CheckCircle, Phone } from "lucide-react"
+import { ArrowLeft, Phone } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import TechnologiesSection from "./technologies-section"
-import categoriesData from "@/data/our-industries-data"
 import KeyFeatures from "./key-features"
 import ProcessSection from "./process-section"
+import TechnologiesSection from "./technologies-section"
 import WhyChooseUsSidebar from "./whyChooseUsSidebar"
+import SpecializedServiceComponent from "./specialized-service"
 
 // Define the types for the service detail data
 export interface ServiceDetail {
@@ -61,7 +61,7 @@ export default function ServiceDetail({ service, className }: ServiceDetailProps
         <div className={cn("", className)}>
             {/* Hero Section */}
             <section className="container mt-10 mx-auto py-20 relative">
-                <Image src="/mobile-app.jpg" alt="Mobile App" layout="fill" objectFit="cover" className="absolute inset-0 -z-20 rounded-2xl" style={{ filter: 'brightness(0.2)' }} />
+                <Image src={service.image} alt={service.title} layout="fill" objectFit="cover" className="absolute inset-0 -z-20 rounded-2xl" style={{ filter: 'brightness(0.2)' }} />
                 <div className="container mx-auto px-20">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                         <div className="max-w-2xl">
@@ -107,12 +107,12 @@ export default function ServiceDetail({ service, className }: ServiceDetailProps
 
                             {/* Specialized Services */}
                             {service.specializedServices.length > 0 && (
-                                <KeyFeatures keyFeatures={service.keyFeatures} />
+                                <SpecializedServiceComponent service={service}/>
                             )}
                         </div>
 
                         {/* Sidebar */}
-                        <WhyChooseUsSidebar service={service}/>
+                        <WhyChooseUsSidebar service={service} />
                     </div>
                 </div>
             </section>

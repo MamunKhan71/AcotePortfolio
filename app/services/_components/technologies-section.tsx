@@ -1,3 +1,4 @@
+import { BadgeCheck } from 'lucide-react';
 import React from 'react';
 
 interface TechnologyCategory {
@@ -21,7 +22,7 @@ const TechnologiesSection: React.FC<TechnologiesSectionProps> = ({ title, catego
                         <ul className="space-y-2 text-slate-600">
                             {category.items.map((item, index) => (
                                 <li key={index} className="flex items-center gap-2">
-                                    <div className="h-1.5 w-1.5 rounded-full bg-emerald-500"></div>
+                                    <BadgeCheck className='bg-primary text-white p-1 rounded-full'/>
                                     {item}
                                 </li>
                             ))}

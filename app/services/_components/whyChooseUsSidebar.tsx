@@ -33,7 +33,7 @@ const WhyChooseUsSidebar: React.FC<WhyChooseUsSidebarProps> = ({ service }) => {
                         Ready to discuss your {service.title.toLowerCase()} project? Get in touch with our team for a free
                         consultation.
                     </p>
-                    <Link href={'/book-appoinment'}>
+                    <Link href={'/book-appointment'}>
                         <Button className="w-full bg-primary hover:bg-green-700">Request a Consultation</Button>
                     </Link>
                 </div>

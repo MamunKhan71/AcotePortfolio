@@ -29,7 +29,7 @@ const SpecializedServiceComponent: React.FC<SpecializedServiceProps> = ({ servic
                         <h3 className="text-xl font-medium mb-2">{specialService.title}</h3>
                         <p className="text-slate-600 mb-4">{specialService.description}</p>
                         <Link
-                            href={`/services/${service.id}/${specialService.slug}`}
+                            href={`/services/${specialService.slug}`}
                             className="text-emerald-600 font-medium inline-flex items-center"
                         >
                             View Details
