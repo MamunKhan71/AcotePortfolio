@@ -1,10 +1,5 @@
 import { ServiceDetail } from "@/app/services/_components/service-detail"
 
-export interface ServicePageProps {
-    params: {
-        slug: string
-    }
-}
 
 export const serviceDetailsData: Record<string, ServiceDetail> = {
     "mobile-app-development": {
