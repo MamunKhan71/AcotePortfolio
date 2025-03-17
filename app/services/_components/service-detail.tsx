@@ -4,6 +4,11 @@ import { cn } from "@/lib/utils"
 import { ArrowLeft, CheckCircle, Phone } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import TechnologiesSection from "./technologies-section"
+import categoriesData from "@/data/our-industries-data"
+import KeyFeatures from "./key-features"
+import ProcessSection from "./process-section"
+import WhyChooseUsSidebar from "./whyChooseUsSidebar"
 
 // Define the types for the service detail data
 export interface ServiceDetail {
@@ -45,13 +50,12 @@ interface ServiceDetailProps {
     service: ServiceDetail
     className?: string
 }
+export const IconComponent = ({ iconName }: { iconName: string }) => {
+    const LucideIcon = require("lucide-react")[iconName]
+    return LucideIcon ? <LucideIcon className="h-10 w-10 text-emerald-500 mb-4" /> : null
+}
 
 export default function ServiceDetail({ service, className }: ServiceDetailProps) {
-    // Function to dynamically import icons from lucide-react
-    const IconComponent = ({ iconName }: { iconName: string }) => {
-        const LucideIcon = require("lucide-react")[iconName]
-        return LucideIcon ? <LucideIcon className="h-10 w-10 text-emerald-500 mb-4" /> : null
-    }
 
     return (
         <div className={cn("", className)}>
@@ -83,8 +87,8 @@ export default function ServiceDetail({ service, className }: ServiceDetailProps
             </section>
 
             {/* Main Content */}
-            <section className="py-16">
-                <div className="container mx-auto px-4">
+            <section className="py-10">
+                <div className="container mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                         <div className="lg:col-span-2">
                             <div className="prose max-w-none">
@@ -93,110 +97,22 @@ export default function ServiceDetail({ service, className }: ServiceDetailProps
                             </div>
 
                             {/* Process Section */}
-                            <div className="mt-12 bg-slate-50 p-8 rounded-xl">
-                                <h2 className="text-2xl font-bold mb-6">{service.process.title}</h2>
-                                <ol className="space-y-6">
-                                    {service.process.steps.map((step) => (
-                                        <li key={step.number} className="flex items-start gap-4">
-                                            <span className="bg-emerald-100 text-emerald-700 rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mt-0.5 font-semibold">
-                                                {step.number}
-                                            </span>
-                                            <div>
-                                                <h3 className="font-medium text-lg">{step.title}</h3>
-                                                <p className="text-slate-600">{step.description}</p>
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ol>
-                            </div>
+                            <ProcessSection process={service.process} />
 
                             {/* Technologies Section */}
-                            <div className="mt-12">
-                                <h2 className="text-2xl font-bold mb-6">{service.technologies.title}</h2>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    {service.technologies.categories.map((category) => (
-                                        <div key={category.name} className="border rounded-lg p-6 bg-white">
-                                            <h3 className="font-medium text-lg mb-3">{category.name}</h3>
-                                            <ul className="space-y-2 text-slate-600">
-                                                {category.items.map((item, index) => (
-                                                    <li key={index} className="flex items-center gap-2">
-                                                        <div className="h-1.5 w-1.5 rounded-full bg-emerald-500"></div>
-                                                        {item}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
+                            <TechnologiesSection categories={service.technologies.categories} title={service.technologies.title} />
 
                             {/* Key Features */}
-                            <div className="mt-12">
-                                <h2 className="text-2xl font-bold mb-6">Key Features</h2>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    {service.keyFeatures.map((feature, index) => (
-                                        <div key={index} className="flex items-start gap-3 py-2">
-                                            <CheckCircle className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />
-                                            <div>
-                                                <h3 className="font-medium">{feature.title}</h3>
-                                                <p className="text-slate-600 text-sm">{feature.description}</p>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
+                            <KeyFeatures keyFeatures={service.keyFeatures} />
 
                             {/* Specialized Services */}
                             {service.specializedServices.length > 0 && (
-                                <div className="mt-12">
-                                    <h2 className="text-2xl font-bold mb-6">Specialized Services</h2>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                        {service.specializedServices.map((specialService, index) => (
-                                            <div key={index} className="border rounded-xl p-6 hover:shadow-md transition-shadow">
-                                                <IconComponent iconName={specialService.icon} />
-                                                <h3 className="text-xl font-medium mb-2">{specialService.title}</h3>
-                                                <p className="text-slate-600 mb-4">{specialService.description}</p>
-                                                <Link
-                                                    href={`/services/${service.id}/${specialService.slug}`}
-                                                    className="text-emerald-600 font-medium inline-flex items-center"
-                                                >
-                                                    View Details
-                                                    <ArrowLeft className="ml-2 h-4 w-4 rotate-180" />
-                                                </Link>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
+                                <KeyFeatures keyFeatures={service.keyFeatures} />
                             )}
                         </div>
 
                         {/* Sidebar */}
-                        <div className="lg:col-span-1">
-                            <div className="sticky top-24">
-                                <div className="bg-slate-50 rounded-xl p-6 mb-6">
-                                    <h3 className="text-xl font-bold mb-4">Why Choose Us</h3>
-                                    <ul className="space-y-4">
-                                        {service.whyChooseUs.map((reason, index) => (
-                                            <li key={index} className="flex items-start gap-3">
-                                                <CheckCircle className="h-5 w-5 text-emerald-500 mt-0.5" />
-                                                <p>{reason}</p>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                                <div className="bg-emerald-50 rounded-xl p-6">
-                                    <h3 className="text-xl font-bold mb-4">Contact Us Today</h3>
-                                    <p className="mb-6">
-                                        Ready to discuss your {service.title.toLowerCase()} project? Get in touch with our team for a free
-                                        consultation.
-                                    </p>
-                                    <Link href={'/book-appoinment'}>
-                                        <Button className="w-full bg-primary hover:bg-green-700">Request a Consultation</Button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
+                        <WhyChooseUsSidebar service={service}/>
                     </div>
                 </div>
             </section>
