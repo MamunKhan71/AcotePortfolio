@@ -1,9 +1,9 @@
 import { footerQuickLinks, footerResourcesLinks } from '@/data/footer-links'
+import CompanyAwards from './components/company-awards'
 import FollowUsContent from './components/follow-us-content'
 import FooterContent from './components/footer-content'
 import FooterFirst from './components/footer-first'
 import FooterInfoBar from './components/footer-info-bar'
-import CompanyAwards from './components/company-awards'
 
 const Footer = () => {
     return (
@@ -18,7 +18,9 @@ const Footer = () => {
                     <FollowUsContent />
                 </div>
             </div>
-            <CompanyAwards />
+            <div>
+                <CompanyAwards />
+            </div>
             <FooterInfoBar />
         </div>
     )

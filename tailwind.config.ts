@@ -80,6 +80,7 @@ export default {
     			sm: 'calc(var(--radius) - 4px)'
     		},
     		animation: {
+				shimmer: "shimmer 2s linear infinite",
     			heartbeat: 'heartbeat 1s ease-in-out infinite',
     			marquee: 'marquee var(--duration) infinite linear',
     			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
@@ -87,6 +88,14 @@ export default {
     			'accordion-up': 'accordion-up 0.2s ease-out'
     		},
     		keyframes: {
+				shimmer: {
+					from: {
+						"backgroundPosition": "0 0"
+					},
+					to: {
+						"backgroundPosition": "-200% 0"
+					}
+				},
     			heartbeat: {
     				'0%, 100%': {
     					transform: 'scale(1)'

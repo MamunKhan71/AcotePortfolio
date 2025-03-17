@@ -1,5 +1,3 @@
-import SocialContainer from './social-container'
-
 const FooterFirst = () => {
     return (
         <div className='space-y-11'>
@@ -7,9 +5,7 @@ const FooterFirst = () => {
                 <img className='w-[133.873px]' src="/acote-logo.png" alt="acote-logo" />
                 <p className='text-base text-white md:max-w-80'>Welcome to our business powerhouse, where we seamlessly integrate BPO services, innovative Design Solutions, result-driven Digital Marketing strategies, and transformative Developments to fuel your success.</p>
             </div>
-            <div>
-                <SocialContainer />
-            </div>
+            
         </div>
     )
 }
