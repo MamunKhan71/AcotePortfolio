@@ -150,9 +150,11 @@ const ServiceDropdownMenu = () => {
                                     </Link>
                                 ))}
                             </div>
-                            <Button variant="link" size="sm" className="h-auto p-0 text-sm font-semibold text-[#FF5E5E] shadow-none">
-                                All Services
-                            </Button>
+                            <Link href={'/services'}>
+                                <Button variant="link" size="sm" className="h-auto p-0 text-sm font-semibold text-[#FF5E5E] shadow-none">
+                                    All Services
+                                </Button>
+                            </Link>
                         </div>
                     ))}
                 </div>
