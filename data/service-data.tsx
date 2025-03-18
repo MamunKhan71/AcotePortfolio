@@ -253,4 +253,49 @@ export const servicesData: ServiceItem[] = [
             },
         ],
     },
+    {
+        id: "bpo-services",
+        icon: "Headphones",
+        title: "Business Process Outsourcing",
+        description: "Efficient and scalable BPO solutions for your business needs",
+        slug: "bpo",
+        subcategories: [
+            {
+                id: "customer-support",
+                icon: "Phone",
+                title: "Customer Support",
+                slug: "customer-support",
+                color: "text-yellow-500",
+            },
+            {
+                id: "data-entry",
+                icon: "Keyboard",
+                title: "Data Entry",
+                slug: "data-entry",
+                color: "text-teal-500",
+            },
+            {
+                id: "technical-support",
+                icon: "Wrench",
+                title: "Technical Support",
+                slug: "technical-support",
+                color: "text-indigo-500",
+            },
+            {
+                id: "back-office",
+                icon: "File",
+                title: "Back Office",
+                slug: "back-office",
+                color: "text-gray-500",
+            },
+            {
+                id: "hr-services",
+                icon: "UserCheck",
+                title: "HR Services",
+                slug: "hr-services",
+                color: "text-pink-500",
+            },
+        ],
+    },
+    
 ]

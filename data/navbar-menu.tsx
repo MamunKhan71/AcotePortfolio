@@ -23,21 +23,25 @@ export const services = {
         title: "Mobile App Development",
         description: "Leading Mobile Application Development Services Provider",
         icon: iconMobile,
+        href: '/services/mobile-app-development'
       },
       {
         title: "Custom Software",
         description: "Software Development As A Service (SaaS) Corporation",
         icon: iconCustomSoftware,
+        href: '/services/custom-software'
       },
       {
         title: "Web Development",
         description: "Building scalable, secure, & user-friendly web solutions.",
         icon: iconWebDev,
+        href: '/services/web-development'
       },
       {
         title: "UI/UX Design",
         description: "Designing seamless, user-centric digital experiences.",
         icon: iconUiDesign,
+        href: '/services/ui-ux-design'
       },
     ],
   },
@@ -48,21 +52,25 @@ export const services = {
         title: "Machine Learning",
         description: "Driving smarter decisions through advanced predictive algorithms.",
         icon: iconAi,
+        href: '/services/machine-learning'
       },
       {
-        title: "IoT Development",
+        title: "NLP",
         description: "Valuable insights from the web efficiently & securely.",
         icon: iconIot,
+        href: '/services/nlp'
       },
       {
-        title: "Multi Modal AI",
+        title: "Predictive Analytics",
         description: "Integrating diverse data streams for holistic AI-powered experiences.",
         icon: iconMultiAi,
+        href: '/services/predictive-analytics'
       },
       {
         title: "Computer Vision",
         description: "Empowering machines to see, understand, & analyze the world.",
         icon: iconVision,
+        href: '/services/computer-vision'
       },
     ],
   },
@@ -70,24 +78,28 @@ export const services = {
     title: "BPO",
     items: [
       {
-        title: "Data Entry",
-        description: "Accurate and efficient input for seamless data management.",
+        title: "Technical Support",
+        description: "Fast and relaible technical support for your needs",
         icon: iconDb,
+        href: '/services/technical-support'
       },
       {
-        title: "Data Processing",
+        title: "Customer Support",
         description: "Transforming raw data into actionable insights.",
         icon: iconDataEntry,
+        href: '/services/customer-support'
       },
       {
         title: "Back-office Support",
         description: "Crafting intuitive Back-office Support for enhanced user navigation.",
         icon: IconBackOffice,
+        href: '/services/back-office'
       },
       {
-        title: "Data Scrapping",
-        description: "Harvesting web data securely and effectively.",
+        title: "HR Services",
+        description: "HR Services for your business needs.",
         icon: iconScraping,
+        href: '/services/hr-services'
       },
     ],
   },
@@ -98,21 +110,25 @@ export const services = {
         title: "SEO",
         description: "Optimizing visibility to drive organic growth.",
         icon: iconSeo,
+        href: '/services/digital-marketing'
       },
       {
         title: "Social Media Marketing",
         description: "Engaging audiences and building connections across platforms.",
         icon: iconMarketing,
+        href: '/services/social-media'
       },
       {
         title: "Content Marketing",
         description: "Creating valuable content to inform, inspire, and convert.",
         icon: iconContentMarketing,
+        href: '/services/content-marketing'
       },
       {
-        title: "Video Marketing",
-        description: "Captivating audiences through powerful visual storytelling.",
+        title: "Email Marketing",
+        description: "Captivating audiences through powerful email marketing.",
         icon: iconVideoMarketing,
+        href: '/services/email-marketing'
       },
     ],
   },

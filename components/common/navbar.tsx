@@ -137,7 +137,7 @@ const ServiceDropdownMenu = () => {
                                 {section.items.map((item) => (
                                     <Link
                                         key={item.title}
-                                        href="#"
+                                        href={item.href}
                                         className="group flex items-start gap-2 rounded-lg p-3 hover:bg-muted"
                                     >
                                         <div>

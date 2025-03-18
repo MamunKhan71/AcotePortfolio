@@ -2537,7 +2537,7 @@ export const serviceDetailsData: Record<string, ServiceDetail> = {
         ],
     },
     // AI / ML Services
-    
+
     "ai-ml-solutions": {
         id: "ai-ml-solutions",
         title: "AI/ML Solutions",
@@ -3637,6 +3637,122 @@ export const serviceDetailsData: Record<string, ServiceDetail> = {
             "Scalable and secure infrastructure",
             "Cost-effective solutions",
             "Ongoing support and maintenance",
+        ],
+    },
+    "bpo": {
+        id: "bpo",
+        title: "Business Process Outsourcing",
+        subtitle: "Efficient and Scalable BPO Solutions",
+        description:
+            "Our BPO services offer efficient and scalable solutions to streamline your business processes and enhance productivity.",
+        image: "/bpo.jpg",
+        keyFeatures: [
+            {
+                title: "Customer Support",
+                description: "24/7 customer support services to enhance customer satisfaction.",
+            },
+            {
+                title: "Data Entry",
+                description: "Accurate and efficient data entry services.",
+            },
+            {
+                title: "Technical Support",
+                description: "Expert technical support for troubleshooting and assistance.",
+            },
+            {
+                title: "Back Office",
+                description: "Comprehensive back-office support for administrative tasks.",
+            },
+            {
+                title: "HR Services",
+                description: "Efficient HR services for recruitment and employee management.",
+            },
+        ],
+        process: {
+            title: "Our BPO Process",
+            steps: [
+                {
+                    number: 1,
+                    title: "Needs Assessment",
+                    description: "Understanding your business requirements and objectives.",
+                },
+                {
+                    number: 2,
+                    title: "Solution Design",
+                    description: "Designing tailored BPO solutions to meet your needs.",
+                },
+                {
+                    number: 3,
+                    title: "Implementation",
+                    description: "Implementing BPO solutions with minimal disruption.",
+                },
+                {
+                    number: 4,
+                    title: "Quality Assurance",
+                    description: "Ensuring high-quality service delivery.",
+                },
+                {
+                    number: 5,
+                    title: "Continuous Improvement",
+                    description: "Ongoing evaluation and optimization of BPO services.",
+                },
+            ],
+        },
+        technologies: {
+            title: "Technologies We Use",
+            categories: [
+                {
+                    name: "Communication Tools",
+                    items: ["Zoom", "Slack", "Microsoft Teams"],
+                },
+                {
+                    name: "Data Management",
+                    items: ["Excel", "Google Sheets", "SQL"],
+                },
+                {
+                    name: "Support Platforms",
+                    items: ["Zendesk", "Freshdesk", "Salesforce"],
+                },
+            ],
+        },
+        specializedServices: [
+            {
+                icon: "Headphones",
+                title: "Customer Support",
+                description: "Comprehensive customer support services.",
+                slug: "customer-support",
+            },
+            {
+                icon: "Keyboard",
+                title: "Data Entry",
+                description: "Efficient and accurate data entry services.",
+                slug: "data-entry",
+            },
+            {
+                icon: "Tool",
+                title: "Technical Support",
+                description: "Expert technical support services.",
+                slug: "technical-support",
+            },
+            {
+                icon: "File",
+                title: "Back Office",
+                description: "Comprehensive back-office support.",
+                slug: "back-office",
+            },
+            {
+                icon: "UserCheck",
+                title: "HR Services",
+                description: "Efficient HR services for your business.",
+                slug: "hr-services",
+            },
+        ],
+        whyChooseUs: [
+            "Experienced BPO professionals",
+            "Tailored solutions to fit your business",
+            "Scalable and flexible services",
+            "Cost-effective outsourcing",
+            "Continuous support and improvement",
         ],
     },
 
