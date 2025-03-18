@@ -120,7 +120,7 @@ export const serviceDetailsData: Record<string, ServiceDetail> = {
         subtitle: "Efficient Multi-Platform Development",
         description:
             "Our cross-platform app development services leverage React Native and Flutter to create high-quality applications for both iOS and Android. Save time and cost with a single codebase.",
-        image: "/placeholder.svg?height=400&width=400",
+        image: "/cross-platform.jpg",
         keyFeatures: [
             {
                 title: "Single codebase for multiple platforms",

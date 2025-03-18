@@ -64,7 +64,7 @@ export default function ServiceCard({ icon, title, description, href, subcategor
                             {subcategories.map((subcategory) => (
                                 <Link
                                     key={subcategory.id}
-                                    href={`${href}/${subcategory.slug}`}
+                                    href={`/services/${subcategory.slug}`}
                                     className="flex items-center gap-3 py-3 hover:bg-slate-50 transition-colors"
                                 >
                                     <IconComponent iconName={subcategory.icon} color={subcategory.color} />
