@@ -61,7 +61,7 @@ export default function ServiceDetail({ service, className }: ServiceDetailProps
         <div className={cn("", className)}>
             {/* Hero Section */}
             <section className="container mt-10 mx-auto py-20 relative">
-                <Image src={service.image} alt={service.title} layout="fill" objectFit="cover" className="absolute inset-0 -z-20 rounded-2xl" style={{ filter: 'brightness(0.2)' }} />
+                <Image src={service.image} alt={service.title} layout="fill" objectFit="cover" className="absolute inset-0 -z-20 rounded-2xl" style={{ filter: 'brightness(0.32)' }} />
                 <div className="container mx-auto px-20">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                         <div className="max-w-2xl">

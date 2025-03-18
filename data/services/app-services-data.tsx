@@ -1,7 +1,7 @@
 import { Code, Database, Layers, LayoutGrid, Lightbulb, Megaphone, MonitorSmartphone, Network, PenTool, Search, Server, Settings, Smartphone, Video } from "lucide-react";
 
 // Service data structure
-export const servicesData = [
+export const appServicesData = [
     {
         id: "it-solutions",
         title: "Developments",
@@ -658,4 +658,5 @@ export const servicesData = [
             },
         ],
     },
+
 ]

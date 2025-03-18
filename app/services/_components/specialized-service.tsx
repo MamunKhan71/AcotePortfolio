@@ -27,7 +27,7 @@ const SpecializedServiceComponent: React.FC<SpecializedServiceProps> = ({ servic
                     <div key={index} className="border rounded-xl p-6 hover:shadow-md transition-shadow">
                         <IconComponent iconName={specialService.icon} />
                         <h3 className="text-xl font-medium mb-2">{specialService.title}</h3>
-                        <p className="text-slate-600 mb-4">{specialService.description}</p>
+                        <p className="text-slate-600 mb-4 line-clamp-2">{specialService.description}</p>
                         <Link
                             href={`/services/${specialService.slug}`}
                             className="text-emerald-600 font-medium inline-flex items-center"
