@@ -283,16 +283,16 @@ export default function JobApplicationForm({ isSubmitted, setIsSubmitted }: { is
 
 function JobDetails() {
     return (
-        <div className="space-y-6">
+        <div className="space-y-4 md:space-y-6">
             <div className="flex justify-between items-center">
                 <div>
-                    <h1 className="text-3xl font-bold text-primary">Frontend Developer</h1>
-                    <p className="text-lg text-secondary-foreground mt-2">Acote Group LTD.</p>
+                    <h1 className="text-xl md:text-3xl font-bold text-primary">Frontend Developer</h1>
+                    <p className="text-base md:text-lg text-secondary-foreground mt-2">Acote Group LTD.</p>
                 </div>
                 <div>
-                    <Badge variant="outline" className="flex font-normal items-center gap-1 text-sm py-1.5">
+                    <Badge variant="outline" className="flex font-normal items-center gap-1 text-xs md:text-sm md:py-1.5">
                         <CalendarIcon size={14} className="text-primary" />
-                        Posted 2 days ago
+                        2 days ago
                     </Badge>
                 </div>
             </div>

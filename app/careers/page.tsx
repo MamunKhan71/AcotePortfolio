@@ -23,9 +23,9 @@ export default function CareerPage() {
     )
 
     return (
-        <div className="w-full min-h-screen py-10 mb-20">
-            <div className="container mx-auto">
-                <div className="text-center mb-10">
+        <div className="w-full md:min-h-screen py-10 mb-10 md:mb-20">
+            <div className="container mx-auto px-4 md:px-0">
+                <div className="text-center mb-5 md:mb-10">
                     <HeaderSection
                         breadcrumb="Home / <span class='font-bold text-primary'>Career</span>"
                         title="Join Our Team"
@@ -33,7 +33,7 @@ export default function CareerPage() {
                     />
                 </div>
 
-                <div className="rounded-xl p-6 mb-10 border">
+                <div className="rounded-xl p-4 md:p-6 mb-5 md:mb-10 border">
                     <div className="flex flex-col md:flex-row gap-4">
                         <div className="flex-1 relative">
                             <Input
@@ -45,7 +45,7 @@ export default function CareerPage() {
                             />
                             <Search className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
                         </div>
-                        <div className="flex-shrink-0">
+                        <div className="md:flex-shrink-0">
                             <Button className="bg-primary hover:bg-[#008c44] h-12 px-6">
                                 <Search className="mr-2 h-4 w-4" />
                                 Search
@@ -73,12 +73,12 @@ export default function CareerPage() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-6 w-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full">
                     {filteredJobs.length > 0 ? (
                         filteredJobs.map((job) => (
                             <div
                                 key={job.id}
-                                className="rounded-xl bg-gray-50/50 border p-6 transition-colors duration-200"
+                                className="rounded-xl bg-gray-50/50 border p-4 md:p-6 transition-colors duration-200"
                             >
                                 <div className="flex flex-col md:flex-row md:items-center justify-between">
                                     <div className="space-y-2">

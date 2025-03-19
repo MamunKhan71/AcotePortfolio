@@ -11,19 +11,19 @@ const JobApplyPage = () => {
     const [isSubmitted, setIsSubmitted] = useState(false)
 
     return (
-        <div className='pt-10'>
+        <div className='pt-10 px-4 md:px-0'>
             <section className="container mx-auto py-10 relative">
                 <Image src={'/join-us.jpg'} alt={'service.title'} layout="fill" objectFit="cover" className="absolute inset-0 -z-20 rounded-2xl" style={{ filter: 'brightness(0.1)' }} />
                 <div className="container mx-auto px-10">
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-                        <div className="flex w-full justify-between items-center">
-                            <div className="max-w-2xl">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8">
+                        <div className="flex flex-col md:flex-row w-full justify-between items-center">
+                            <div className="md:max-w-2xl">
                                 <Link href="/careers" className="inline-flex items-center text-white/80 hover:text-white mb-4">
                                     <ArrowLeft className="h-4 w-4 mr-2" />
                                     Back to all jobs
                                 </Link>
-                                <h1 className="text-4xl font-bold text-white mb-6">{'Frontend Developer'}</h1>
-                                <p className="text-xl text-white/90 mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus iste eos quam eum ipsam eius natus ratione, voluptate fugiat. Modi.</p>
+                                <h1 className="text-2xl md:text-4xl font-bold text-white mb-6">{'Frontend Developer'}</h1>
+                                <p className="text-base md:text-xl text-white/90 mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus iste eos quam eum ipsam eius natus ratione, voluptate fugiat. Modi.</p>
                                 <div className="flex gap-4 items-center">
                                 </div>
                             </div>
@@ -34,7 +34,7 @@ const JobApplyPage = () => {
                                     </Button>
                                 </Link>
                                 <Link href={'/book-appointment'}>
-                                    <ShimmerButton title="Apply Now" className="text-white" />
+                                    <ShimmerButton title="Apply Now" className="text-white text-sm md:text-base" />
                                 </Link>
                             </div>
                         </div>
