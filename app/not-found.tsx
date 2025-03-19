@@ -5,8 +5,8 @@ import Link from "next/link"
 
 export default function NotFound() {
     return (
-        <div className="md:min-h-screen bg-background flex flex-col items-center justify-center text-center gap-2 px-4 md:px-0">
-            <div className="relative h-60 w-60">
+        <div className="md:min-h-screen bg-background flex flex-col items-center justify-center text-center gap-2 px-4 md:px-0 py-10 md:py-0">
+            <div className="relative h-40 md:h-60 w-40 md:w-60">
                 <Image src={'/404.png'} fill alt="404 not found image" />
             </div>
             <h1 className="text-4xl font-bold text-primary mb-2">Oops! Page Not Found</h1>
