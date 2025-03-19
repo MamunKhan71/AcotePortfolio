@@ -24,8 +24,8 @@ const NavigationMenu = () => {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center gap-10 w-full justify-end">
-                    <ul className="flex gap-10 items-center">
+                <div className="hidden md:flex items-center gap-16 w-full justify-end">
+                    <ul className="flex gap-12 items-center">
                         {
                             NAV_LINKS?.map((navItem, index) => (
                                 <li key={`navbar-item-${index}`}>

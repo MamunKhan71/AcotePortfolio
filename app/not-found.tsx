@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export default function NotFound() {
     return (
-        <div className="min-h-screen bg-background flex flex-col items-center justify-center text-center gap-2">
+        <div className="md:min-h-screen bg-background flex flex-col items-center justify-center text-center gap-2 px-4 md:px-0">
             <div className="relative h-60 w-60">
                 <Image src={'/404.png'} fill alt="404 not found image" />
             </div>
