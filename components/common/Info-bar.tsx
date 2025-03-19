@@ -13,7 +13,7 @@ const InfoBar = () => {
                     </div>
                     <div className='flex gap-10 text-sm md:text-lg'>
                         <div className='flex items-center gap-2 md:gap-5'>
-                            <BsFillTelephoneFill size={16} />
+                            <BsFillTelephoneFill size={12} />
                             <p>+880 1758 388865</p>
                         </div>
                         <div className='flex items-center  gap-2 md:gap-5 text-sm md:text-lg'>
