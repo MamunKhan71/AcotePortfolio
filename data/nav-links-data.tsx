@@ -10,5 +10,6 @@ export const NAV_LINKS: NAV_LINKS_TYPES[] = [
     { name: "Portfolio", href: "/our-portfolio" },
     { name: "About", href: "/about-us" },
     { name: "Contact", href: "/contact-us" },
+    { name: "Career", href: "/careers" },
     { name: "Events", href: "/events" }
 ];
